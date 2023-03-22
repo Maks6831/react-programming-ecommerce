@@ -27,6 +27,15 @@ const Navbar = () => {
               Products
             </NavLink>
             <NavLink
+              to="/login"
+              end
+              className={({ isActive }) =>
+                isActive ? 'buttons rendered' : 'buttons not-rendered'
+              }
+            >
+              Login
+            </NavLink>
+            <NavLink
               to="/contact"
               end
               className={({ isActive }) =>
