@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuth, AuthProvider } from "../contexts/AuthContext";
 import { auth, provider } from "../pages/Firebase";
 
+
 export const NavbarSignup = () => {
   const { currentUser, logout, signupWithGoogle, loggedIn } = useAuth();
 
@@ -40,8 +41,9 @@ export const NavbarSignup = () => {
         }}
       >
       {loggedIn === true ?  
-         <button onClick={() => handleLogout()}>Log Out</button> : <button onClick={() => handleGoogleSignup()}>Login</button>
+         <button onClick={() => handleLogout()}>Sign Out</button> : <button onClick={() => handleGoogleSignup()}>Sign In</button>
         }
+        <button onClick={() => handleLogout()}>Sign Out</button>
         
       </div>
     </>

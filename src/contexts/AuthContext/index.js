@@ -66,6 +66,8 @@ export function AuthProvider({ children }) {
     return currentUser.updateProfile({ displayName: name });
   }
 
+  
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -100,3 +102,4 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+

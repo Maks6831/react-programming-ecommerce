@@ -3,8 +3,13 @@ import { NavLink, Link } from "react-router-dom";
 import './Navbar.css';
 import cartImage from '../images/image17.png'
 import NavbarSignup from "./NavBarSignUp";
+import { useAuth, AuthProvider, AuthContext } from "../contexts/AuthContext";
+import { auth, provider } from "../pages/Firebase";
+
 
 const Navbar = () => {
+
+  const { currentUser } = useAuth()
     return (
         <nav className="navBar">
             <Link to='/' className="brandName">ByteBazaar</Link>
@@ -36,15 +41,10 @@ const Navbar = () => {
             >
               Contact
             </NavLink>
-            <NavLink
-              to="/login"
-              end
-              className={({ isActive }) =>
-                isActive ? 'buttons rendered' : 'buttons not-rendered'
-              }
-            >
-              Login
-            </NavLink>
+             <div className="userName"> <>{!currentUser ? <>Not Signed In </> : <>{currentUser.displayName}</>} </>
+              </div>
+
+
             <Link to='/basket'><img src={cartImage} alt='cart shopping' className="cartImage"/></Link>
             </ul>
 

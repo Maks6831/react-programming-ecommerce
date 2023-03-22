@@ -16,10 +16,19 @@
 
 }
 
+.userName {
+    color: white;
+    margin: 9px;
+    font-size: 1.2rem;
+}
+
+
+
 .navBar{
     display: flex;
     justify-content: space-between;
     background-color: black;
+    height: 70px;
 }
 
 .buttonContainer {
