@@ -1,5 +1,5 @@
 .Hero{
-    background-image:  url("../images/HomeBanner.png");
+    background-image:  url("../images/homeBanner.jpg");
 
     background-attachment: fixed;
     background-position: center;
@@ -53,16 +53,30 @@
     height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    
 }
 
 .newbie {
-    background-image: url('../images/newbiekit.png');
+    background-image: url('../images/newbiekit.jpg');
 }
 
 .ninja {
-    background-image: url('../images/ninjakit.png');
+    background-image: url('../images/ninjakit.jpg');
 }
 
 .master {
-    background-image: url('../images/masterkit.png');
+    background-image: url('../images/masterkit.jpg');
+}
+
+.card { 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.kitTitle {
+    text-align: center;
+    padding: 5px;
 }
