@@ -1,0 +1,10 @@
+#main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 10vh;
+
+  color: white;
+  font-size: 1.3rem;
+}
