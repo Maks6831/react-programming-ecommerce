@@ -1,9 +1,10 @@
 import React from "react";
+import "../styles/Footer.css";
 
-const Footer = () => {
-    return (
-        <div> this is the footer</div>
-    )
+export default function Footer() {
+  return (
+    <footer id="main-footer">
+      <small>Copyright - ByteBazar 2023</small>
+    </footer>
+  );
 }
-
-export default Footer;
