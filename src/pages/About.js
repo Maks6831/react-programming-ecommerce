@@ -2,16 +2,12 @@ import React from "react";
 import '../styles/About.css';
 import '../styles/Home.css';
 import { Link } from "react-router-dom";
+import Achero from "../components/Achero";
 
 const About = () => {
     return (
         <div>
-            <div className="hero">
-                <div className="hero-text">
-                    <h1 className="flex-child">Meet all of your coding needs</h1>
-                    <p className="flex-child">Feel free to browse our products</p>
-                </div>
-            </div>
+            <Achero/>
             <div className="buttonContainer">
         <Link to='/products' className="productButton">Discover our Products</Link>
         </div>
