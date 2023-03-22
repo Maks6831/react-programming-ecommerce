@@ -39,9 +39,8 @@ export const NavbarSignup = () => {
           height: "80vh",
         }}
       >
-       
-        {loggedIn === true ?  
-        <button onClick={() => handleLogout()}>LOGOUT</button> :  <button onClick={() => handleGoogleSignup()}>SIGNUP</button>
+      {loggedIn === true ?  
+         <button onClick={() => handleLogout()}>Log Out</button> : <button onClick={() => handleGoogleSignup()}>Login</button>
         }
         
       </div>
