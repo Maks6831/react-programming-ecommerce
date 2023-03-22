@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import './Navbar.css';
 import cartImage from '../images/image17.png'
+import NavbarSignup from "./NavBarSignUp";
 
 const Navbar = () => {
     return (
@@ -27,15 +28,6 @@ const Navbar = () => {
               Products
             </NavLink>
             <NavLink
-              to="/login"
-              end
-              className={({ isActive }) =>
-                isActive ? 'buttons rendered' : 'buttons not-rendered'
-              }
-            >
-              Login
-            </NavLink>
-            <NavLink
               to="/contact"
               end
               className={({ isActive }) =>
@@ -43,6 +35,15 @@ const Navbar = () => {
               }
             >
               Contact
+            </NavLink>
+            <NavLink
+              to="/login"
+              end
+              className={({ isActive }) =>
+                isActive ? 'buttons rendered' : 'buttons not-rendered'
+              }
+            >
+              Login
             </NavLink>
             <Link to='/basket'><img src={cartImage} alt='cart shopping' className="cartImage"/></Link>
             </ul>

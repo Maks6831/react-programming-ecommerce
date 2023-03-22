@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Basket from './pages/Basket';
-import Login from './pages/Login'
+import NavbarSignup from './components/NavBarSignUp'
 
 
 
@@ -23,7 +23,7 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/contact' element={<Contact />}/>
           <Route path='/basket' element={<Basket/>}/>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/login' element={<NavbarSignup/>}/>
         </Routes>
         <Footer/>
       </div>
