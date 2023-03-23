@@ -9,17 +9,15 @@ import { useAppState } from '../providers/app-state'
 const Product = (props) => {
 
     const [showModal, setShowModal] = useState(false);
-    const {formData, state, setState} = useAppState()
+    const {formData, productID, setProductID} = useAppState()
 
-    // useEffect(() => {
-    //     setState(props.id)
-    // }, [])
+ 
 
     useEffect(() => {
-        if (state) {
-            console.log(state)
+        if (productID) {
+            console.log(productID)
         }
-    }, [state])
+    }, [productID])
     
 
     function hideModal() {
@@ -29,7 +27,7 @@ const Product = (props) => {
     function addToCart() {
         console.log(props.name)
         // Set the global state to the ID of the product
-        setState(props.id)
+        setProductID(props.id)
         // Get the ID of the current product from its props
         const findProductID = props.id
         // Gets the saved products from local storage, or creates an empty array if none are found
@@ -54,7 +52,7 @@ const Product = (props) => {
             <p className="p-tag">{props.name}</p>
             <p className="p-tag">price: £{props.price}</p>
             <button className="product-button" onClick={addToCart}> Add to cart</button>
-            {showModal && state === props?.id ? (
+            {showModal && productID === props?.id ? (
                 <div className="modal">
                 <div className="modal-content">
                     <h5 className="modal-title"> {props.name} has been added to the cart!</h5>
