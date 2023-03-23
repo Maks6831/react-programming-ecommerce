@@ -27,7 +27,7 @@ function App() {
           <Route path='/login' element={<NavbarSignup/>}/>
           <Route path='/products/:item' element={<Item />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );
