@@ -12,7 +12,7 @@ export default function ContactForm() {
         <hr />
         <form className="form">
           <div className="form-input-group">
-            <label for="name">Name:</label>
+            <label htmLfor="name">Name:</label>
             <input
               type="text"
               placeholder="Enter your name"
@@ -22,7 +22,7 @@ export default function ContactForm() {
           </div>
 
           <div className="form-input-group">
-            <label for="email" id="email-label">
+            <label htmLfor="email" id="email-label">
               Email:
             </label>
             <input
@@ -33,7 +33,7 @@ export default function ContactForm() {
             />
           </div>
           <div className="form-textarea-group">
-            <label for="textarea">Message:</label>
+            <label htmLfor="textarea">Message:</label>
             <textarea
               placeholder="Write your message"
               className="form-input"
