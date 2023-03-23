@@ -15,7 +15,6 @@ const Item = () => {
     
     
     
-    console.log(currentItem);
     return (
         <div>
             <Productrenderer
