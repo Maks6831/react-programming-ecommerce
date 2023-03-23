@@ -1,0 +1,20 @@
+.Card {
+    width: 300px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.product-image {
+    width: 90%;
+    margin: 10px;
+}
+
+.productButton {
+    width: 100%;
+}
+
+.p-tag {
+    padding: 5px;
+}
