@@ -1,0 +1,89 @@
+[{
+    "item": "1",
+    "name": "Ninja Recliner DeskChair",
+    "image": "https://i.ebayimg.com/images/g/v2wAAOSwwYtj~v5I/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "79.99",
+    "level": "Ninja"
+},
+{
+    "item": "2",
+    "name": "Newbie White Deskchair",
+    "image": "https://i.ebayimg.com/images/g/HScAAOSwMIFjwEG0/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "39.99",
+    "level": "Newbie"
+
+},
+{
+    "item": "3",
+    "name": "Merge Master Ergonomic Massage Deskchair",
+    "image": "https://i.ebayimg.com/images/g/6AAAAOSwFCBjRqeR/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "249.99",
+    "level": "Master"
+
+},{
+    "item": "4",
+    "name": "Newbie Wired Keyboard",
+    "image": "https://i.ebayimg.com/images/g/1GAAAOSwByVe2LKz/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "12.99",
+    "level": "Newbie"
+},{
+    "item": "5",
+    "name": "Ninja Wireless Keyboard",
+    "image": "https://i.ebayimg.com/images/g/lbcAAOSwZPNcmfpg/s-l300.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "41.99",
+    "level": "Ninja"
+},{
+    "item": "6",
+    "name": "Master Wireless Mechanical RGB Keyboard",
+    "image": "https://i.ebayimg.com/images/g/hEkAAOSwwYVin0cT/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "41.99",
+    "level": "Master"
+},{
+    "item": "7",
+    "name": "Newbie 19inch LCD Monitor",
+    "image": "https://i.ebayimg.com/images/g/QXwAAOSwT4JfWzjR/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "29.99",
+    "level": "Newbie"
+},{
+    "item": "8",
+    "name": "Ninja 27inch 1080p LED monitor",
+    "image": "https://i.ebayimg.com/images/g/xbIAAOSw0~pgS2sP/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "121.99",
+    "level": "Newbie"
+},{
+    "item": "9",
+    "name": "Master 55inch 4k UHD monitor",
+    "image": "https://i.ebayimg.com/images/g/QT0AAOSwWMtjPslf/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "121.99",
+    "level": "Newbie"
+},{
+    "item": "10",
+    "name": "Newbie Cartoon USB Wired Mouse",
+    "image": "https://i.ebayimg.com/images/g/9HoAAOSwtWBkFCx-/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "11.99",
+    "level": "Newbie"
+},{
+    "id": "11",
+    "name": "Ninja USB Wired Mouse",
+    "image": "https://i.ebayimg.com/images/g/QksAAOSwGcVj6lFV/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "49.99",
+    "level": "Ninja"
+},{
+    "id": "12",
+    "name": "Master Wireless RGB Ergonomic mouse",
+    "image": "https://i.ebayimg.com/images/g/VL0AAOSwlz1iY8sG/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "79.99",
+    "level": "Master"
+}]
