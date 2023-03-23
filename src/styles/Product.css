@@ -18,3 +18,44 @@
 .p-tag {
     padding: 5px;
 }
+
+/* MODAL */
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 280px;
+    height: auto;
+    padding: 25px;
+    border-radius: 0px;
+    border: 0px;
+    justify-content: center;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+
+
+.button-navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+button:hover {
+    transition: all 0.3s ease;
+}
+
+button:hover a {
+    color: white;
+}
