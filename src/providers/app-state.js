@@ -18,6 +18,8 @@ export function AppStateProvider({ children }) {
   //example
   const [state, setState] = useState("");
 
+  const [productID, setProductID] = useState("")
+
   // for ContactForm
   const [formData, setFormData] = useState({
     name: "",
@@ -35,6 +37,8 @@ export function AppStateProvider({ children }) {
     setFormData,
     success,
     setSuccess,
+    productID,
+    setProductID
   };
 
   return (
