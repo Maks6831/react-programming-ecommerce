@@ -22,11 +22,12 @@ const Product = (props) => {
         const savedProductsJSON = localStorage.getItem('savedProducts')
         const savedProducts = savedProductsJSON ? JSON.parse(savedProductsJSON) : []
         // Find the ID and add it to the savedProducts array
-        const productToAdd = itemInfo.find(product => product.id === findProductID);
-        savedProducts.push(productToAdd);
+        const productToAdd = itemInfo.find(product => product.id === findProductID)
+        savedProducts.push(productToAdd)
         console.log('productID: ' + findProductID)
-        console.log('Storage Array: ' + savedProducts)
-        setShowModal(true);
+        localStorage.setItem('savedProducts', JSON.stringify(savedProducts))
+        console.log('Storage Array: ' + JSON.stringify(savedProducts))
+        setShowModal(true)
     }
 
     function goToBasket() {
