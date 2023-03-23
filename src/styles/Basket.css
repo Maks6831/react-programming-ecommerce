@@ -19,6 +19,7 @@
   font-weight: 100;
   color: rgba(0, 0, 0, 0.6);
   padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 #basket-h1 span {
@@ -41,7 +42,6 @@
 .item-list {
   list-style-type: none;
   height: auto;
-  border: 1px solid orange;
 }
 
 a {
@@ -78,4 +78,26 @@ a {
   /* border: 1px solid rgba(0, 0, 0, 0.23); */
 }
 
-/* */
+/* ---------------------*/
+#checkout {
+  padding: 5rem;
+  align-items: center;
+}
+
+.checkout-btn {
+  width: 40%;
+  height: 3.3rem;
+  left: 30%;
+  font-size: 1.3rem;
+  border-radius: 5.5rem;
+  padding: 0.8rem;
+  margin: 1rem;
+  border: none;
+  background-color: #4c12a1;
+  color: white;
+  cursor: pointer;
+}
+
+.purple-link {
+  color: #4c12a1;
+}

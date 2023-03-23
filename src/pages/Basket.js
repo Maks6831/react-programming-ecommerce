@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../styles/Basket.css";
 
@@ -33,7 +34,15 @@ const Basket = () => {
             </li>
           </ul>
         </section>
-        <section id="checkout"></section>
+        <section className="flex-col" id="checkout">
+          <h2>
+            Total: <span>500</span> GBP
+          </h2>
+          <button className="checkout-btn">Checkout</button>
+          <Link to="/products" className="purple-link">
+            Continue Shopping
+          </Link>
+        </section>
       </section>
     </div>
   );
