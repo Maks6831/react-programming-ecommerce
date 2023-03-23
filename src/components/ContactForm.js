@@ -3,7 +3,6 @@ import React from "react";
 import "../styles/ContactForm.css";
 
 import { useAppState } from "../providers/app-state";
-// import { setTimeout } from "timers/promises";
 
 export default function ContactForm() {
   const { formData, setFormData } = useAppState();
@@ -41,9 +40,9 @@ export default function ContactForm() {
           message: "",
         }));
 
-        // setTimeout(() => {
-        //   setSuccess(false);
-        // }, 3000);
+        setTimeout(() => {
+          setSuccess(false);
+        }, 1000);
       })
       .catch((err) => console.log(err));
   };
@@ -72,6 +71,7 @@ export default function ContactForm() {
               placeholder="Enter your name"
               className="form-input"
               id="email"
+              required
               value={formData.name}
               onChange={handleChange}
             />
@@ -87,6 +87,7 @@ export default function ContactForm() {
               placeholder="Enter your email address"
               className="form-input"
               id="email"
+              required
               value={formData.email}
               onChange={handleChange}
             />
@@ -99,13 +100,14 @@ export default function ContactForm() {
               className="form-input"
               rows="5"
               id="contact-textarea"
+              required
               value={formData.message}
               onChange={handleChange}
             />
           </div>
 
           <button id="submit-btn">Send</button>
-          {success && <p>Form submitted successfully</p>}
+          {success && alert("Thank you for contacting us!😎")}
         </form>
       </div>
     </>
