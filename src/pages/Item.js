@@ -1,13 +1,28 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router";
 import itemInfo from "../itemInfo.json"
+import Productrenderer from "../components/Productrenderer";
 
 const Item = () => {
+    const [currentItem, setCurrentItem] = useState({})
     const { item } = useParams()
-    const currentItem = itemInfo.filter((id)=>((id.name === item)));
+    useEffect(()=>{
+        setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
+    },[])
+
+    
+    
+    
     console.log(currentItem);
     return (
-        <div>this is the item page</div>
+        <div>
+            <Productrenderer
+            
+            name={currentItem[0]?.name}
+            />
+        </div>
     )
 }
 
