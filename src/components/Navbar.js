@@ -49,7 +49,7 @@ const Navbar = () => {
                 <button className="buttons not-rendered" onClick={() => logout()}>Sign Out</button>
                } </>
            
-             <div className="userName"> <>{!currentUser ? <> Not Signed In </> : <>{currentUser.displayName}</>} </>
+             <div className="userName"> <>{!currentUser ? <> Not Signed In </> : <>{currentUser?.displayName}</>} </>
               </div>
 
 
