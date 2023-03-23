@@ -30,9 +30,13 @@ const Product = (props) => {
             <p className="p-tag">price: £{props.price}</p>
             <button className="product-button" onClick={addToCart}> Add to cart</button>
             {showModal && (
+                <div className="modal">
                 <div className="modal-content">
+                    <h5 class="modal-title"> Your item has been added to the cart!</h5>
+                    <p> Continue shopping or go to checkout!</p>
                 <button className="button-navigation" onClick={hideModal}>Continue shopping</button>
                 <button className="button-navigation" onClick={goToBasket}>Go to basket</button>
+                </div>
                 </div>
             )}
         </div>
