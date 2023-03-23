@@ -3,10 +3,11 @@ import React from "react";
 import "../styles/ContactForm.css";
 
 import { useAppState } from "../providers/app-state";
+// import { setTimeout } from "timers/promises";
 
 export default function ContactForm() {
   const { formData, setFormData } = useAppState();
-  console.log(formData);
+  const { success, setSuccess } = useAppState();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -20,7 +21,31 @@ export default function ContactForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(formData);
+    const data = JSON.stringify(formData);
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setSuccess(true);
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          name: "",
+          email: "",
+          message: "",
+        }));
+
+        // setTimeout(() => {
+        //   setSuccess(false);
+        // }, 3000);
+      })
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -31,7 +56,14 @@ export default function ContactForm() {
         </h2>
         <hr />
 
-        <form className="form" onSubmit={handleSubmit}>
+        <form
+          className="form"
+          onSubmit={handleSubmit}
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
           <div className="form-input-group">
             <label htmlFor="name">Name:</label>
             <input
@@ -40,6 +72,7 @@ export default function ContactForm() {
               placeholder="Enter your name"
               className="form-input"
               id="email"
+              value={formData.name}
               onChange={handleChange}
             />
           </div>
@@ -54,6 +87,7 @@ export default function ContactForm() {
               placeholder="Enter your email address"
               className="form-input"
               id="email"
+              value={formData.email}
               onChange={handleChange}
             />
           </div>
@@ -65,11 +99,13 @@ export default function ContactForm() {
               className="form-input"
               rows="5"
               id="contact-textarea"
+              value={formData.message}
               onChange={handleChange}
             />
           </div>
 
           <button id="submit-btn">Send</button>
+          {success && <p>Form submitted successfully</p>}
         </form>
       </div>
     </>

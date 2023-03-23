@@ -14,13 +14,18 @@ const AppStateContext = createContext();
 
 export function AppStateProvider({ children }) {
   //define all states here
+
+  //example
   const [state, setState] = useState("");
 
+  // for ContactForm
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    access_key: "51ea3477-9de9-4034-a253-7261a75c114b",
   });
+  const [success, setSuccess] = useState(false);
 
   // create a value object which gathers all states and their updaters
   const value = {
@@ -28,6 +33,8 @@ export function AppStateProvider({ children }) {
     setState,
     formData,
     setFormData,
+    success,
+    setSuccess,
   };
 
   return (
