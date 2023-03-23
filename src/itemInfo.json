@@ -23,4 +23,18 @@
     "price": "249.99",
     "level": "Master"
 
+},{
+    "item": "4",
+    "name": "Newbie Wired Keyboard",
+    "image": "https://i.ebayimg.com/images/g/1GAAAOSwByVe2LKz/s-l500.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "12.99",
+    "level": "Newbie"
+},{
+    "item": "5",
+    "name": "Ninja Wireless Keyboard",
+    "image": "https://i.ebayimg.com/images/g/lbcAAOSwZPNcmfpg/s-l300.jpg",
+    "description": "The ergonomic chair has an S-shaped backrest design, which conforms to the basic characteristics of ergonomics, provides effective support for your back, neck and head, makes it perfectly fit your spine, and provides you with the most comfortable sitting posture. If you need to sit for a long time to work, it can effectively relieve the fatigue caused by a day's work.",
+    "price": "41.99",
+    "level": "Ninja"
 }]
