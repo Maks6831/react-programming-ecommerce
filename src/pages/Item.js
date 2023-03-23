@@ -20,6 +20,12 @@ const Item = () => {
             <Productrenderer
             
             name={currentItem[0]?.name}
+            key={currentItem[0]?.id}
+            description={currentItem[0]?.description}
+            price={currentItem[0]?.price}
+            image={currentItem[0]?.image}
+
+
             />
         </div>
     )
