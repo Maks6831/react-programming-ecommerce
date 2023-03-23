@@ -2,7 +2,12 @@ import React from "react";
 
 import "../styles/ContactForm.css";
 
+import { useAppState } from "../providers/app-state";
+
 export default function ContactForm() {
+  const { formData, setFormData } = useAppState();
+  console.log(formData);
+
   return (
     <>
       <div className="form-container">
