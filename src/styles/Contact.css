@@ -1,0 +1,14 @@
+#contact-page-h1 {
+  text-align: center;
+  font-size: 4.2rem;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  /* position: absolute;
+  left: 30%; */
+}
+
+#contact-page-h1 span {
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.7);
+}
