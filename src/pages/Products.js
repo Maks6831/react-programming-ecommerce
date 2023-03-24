@@ -14,6 +14,7 @@ const Products = () => {
             description={item.description}
             price={item.price}
             level={item.level}
+            type={item.type}
             
             />))}
         </div>
