@@ -2,13 +2,13 @@
   background-image: url("../images/macbooknight.jpg");
 
   background-attachment: fixed;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 80vh;
   position: relative;
-  background-position: 0% 100%;
+  background-position: 0% 50%;
 }
 
 .hero-text {
