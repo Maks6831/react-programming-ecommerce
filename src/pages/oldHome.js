@@ -1,13 +1,16 @@
 import React from "react";
-import "../styles/About.css";
-import "../styles/Home.css";
+import "../styles/oldHome.css";
 import { Link } from "react-router-dom";
-import Achero from "../components/Achero";
 
-const About = () => {
+const oldHome = () => {
   return (
     <div>
-      <Achero />
+      <div className="Hero">
+        <div className="heroOpacity">
+          <h1>Welcome to our page</h1>
+          <p>Please enjoy everything</p>
+        </div>
+      </div>
       <div className="buttonContainer">
         <Link to="/products" className="productButton">
           Discover our Products
@@ -35,4 +38,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default oldHome;
