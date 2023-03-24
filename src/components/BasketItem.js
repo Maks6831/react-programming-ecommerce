@@ -4,7 +4,7 @@ import "../styles/Basket.css";
 
 
 
-export default function BasketItem({ name, id, quantity, price, removeLocalItem }) {
+export default function BasketItem({ name, quantity, price, removeLocalItem }) {
  
 
 

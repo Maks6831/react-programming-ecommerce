@@ -1,50 +1,49 @@
+// Imports relevant to the code
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import BasketItem from "../components/BasketItem"
 import "../styles/Basket.css"
 
+// Exported function
 export default function Basket() {
-
+  // The state used to control this component 
   const [ localData, setLocalData] = useState([])
-
-
+  // Sets the variable localData to include the LocalStorage object
   useEffect(() => {
  
     setLocalData(JSON.parse(localStorage.getItem("savedProducts")) || [])
 
   }, [])
-
+  //If localData has a value, create an array called localProducts
+  //and populate it with the local storage object in an accessible format
+  //runs each time localData changes
   useEffect(() => {
     if (localData.length > 0) {
       let localProducts = []
-      console.log("saved products: " + localData)
       for (let i = 0; i > localData.length; i++) {
       localProducts.push({ 
         id: localData[i].id, 
         name: localData[i].name, 
         price: localData[i].price, 
-        image: localData[i].image })
-        
-      console.log("test ", localProducts)
-      }
+        image: localData[i].image 
+      })
     }
+  }
      
 }, [localData])
-
+// Enables us to clear localStorage and the arrays. Allowing for a remove all button
 function clearLocalStorage() {
   localStorage.clear()
   setLocalData([])
 }
 
-function removeLocalItem(productToRemove) {
-  localStorage.removeItem(productToRemove.id)
-    let newLocalData = localData.filter((product) => product.id !== productToRemove.id)
-    setLocalData(newLocalData)
-
+// Removes a specific item from the local storage, removes its UI element and updates the local storage object 
+function removeLocalItem(id) {
+  localStorage.removeItem(id)
+  setLocalData(prevLocalData => prevLocalData.filter(product => product.id !== id))
+  localStorage.setItem('savedProducts', JSON.stringify(localData.filter(product => product.id !== id)))
 }
-
-
-    
+ 
       
    
 
@@ -71,7 +70,7 @@ function removeLocalItem(productToRemove) {
               productID={product.id}
               name={product.name}
               price={product.price}
-              removeLocalItem={() => removeLocalItem(product)}
+              removeLocalItem={() => removeLocalItem(product.id)}
               />
             ))}
           </ul>
