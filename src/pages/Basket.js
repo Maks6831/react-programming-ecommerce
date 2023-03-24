@@ -38,6 +38,25 @@ function clearLocalStorage() {
 
 function removeLocalItem(productToRemove) {
   localStorage.removeItem(productToRemove.id)
+    let newLocalData = localData.filter((product) => product.id !== productToRemove.id)
+    setLocalData(newLocalData)
+
+}
+
+
+    
+      
+   
+
+  return (
+
+    <div id="test-div">
+    <section id="basket-container">
+      <h1 id="basket-h1">
+        <span>[</span> Your Basket <span>]</span>
+      </h1>
+      <section className="flex-col">
+        <ul className=" flex-col item-list" id="basket">
           <ul className="flex-row item-header">
             <li className="head name-col">Items</li>
             <li className="head quantity-col">Quantity</li>
