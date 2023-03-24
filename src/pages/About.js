@@ -8,6 +8,15 @@ const About = () => {
   return (
     <div>
       <Achero />
+      <section id="about-section">
+        <p className="about-description">
+          At ByteBazaar, we offer a wide range of high-quality equipment and
+          accessories from top brands for your coding needs. Our e-commerce
+          platform provides a secure and convenient shopping experience, and our
+          customer support team is always available to assist you. Join our
+          community today and elevate your coding setup!
+        </p>
+      </section>
       <div className="buttonContainer">
         <Link to="/products" className="productButton">
           Discover our Products
