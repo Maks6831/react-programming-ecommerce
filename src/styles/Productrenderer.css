@@ -1,0 +1,38 @@
+.item-section {
+    box-shadow: rgb(38, 57, 77) 10px 20px 30px -10px;
+    margin:10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(217, 214, 214);
+}
+
+.item-h1-tag {
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-image {
+    max-width: 300px;
+    margin: 20px;
+    border-radius: 5px; 
+}
+
+.item-info-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.item-p-tag {
+    margin:20px;
+}
+
+.item-button {
+    margin: 20px;
+
+}
