@@ -1,15 +1,17 @@
-import React, { Link } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Basket.css";
+
 
 export default function BasketItem({ name, quantity, price }) {
   return (
-    <li className=" flex-row item">
+    <ul className=" flex-row item">
       <li className=" basket-card name">
-        <Link to="/">{name}</Link>
+        <Link to={`/products/${name}`}>{name}</Link>
       </li>
       <li className=" basket-card quantity">{quantity}</li>
       <li className=" basket-card price">{price}</li>
       <li className=" basket-card currency">GBP</li>
-    </li>
+    </ul>
   );
 }
