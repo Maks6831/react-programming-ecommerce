@@ -54,8 +54,9 @@ const Products = () => {
             <div className="title-section">
             <h1>Checkout Our Products</h1>
             <div className="filter-section">
-                <div onClick={()=> setOpen(!open)}>Filter</div>
+                <div onClick={()=> setOpen(!open)}>Filter
                 {open && <DropDownMenu handleButton={handleButton}/>} 
+                </div>
                 <h2>{filterName}</h2>
             </div>
 
