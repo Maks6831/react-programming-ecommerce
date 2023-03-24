@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import '../styles/Navbar.css';
 import cartImage from '../images/image17.png'
-import NavbarSignup from "./NavBarSignUp";
 import { useAuth, AuthProvider, AuthContext } from "../contexts/AuthContext";
 import { auth, provider } from "../pages/Firebase";
 

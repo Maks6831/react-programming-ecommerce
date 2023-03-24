@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Basket from './pages/Basket';
-import NavbarSignup from './components/NavBarSignUp'
 import Item from './pages/Item';
 
 
@@ -24,7 +23,6 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/contact' element={<Contact />}/>
           <Route path='/basket' element={<Basket />}/>
-          <Route path='/login' element={<NavbarSignup />}/>
           <Route path='/products/:item' element={<Item />} />
         </Routes>
         <Footer />
