@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../styles/Basket.css";
 
-import BasketItem from "../components/BasketItem";
+// import BasketItem from "../components/BasketItem";
 
 const Basket = () => {
   return (
@@ -22,7 +22,7 @@ const Basket = () => {
             </li>
             <li className=" flex-row item">
               <li className=" basket-card name">
-                <a href="/">Dummy product</a>
+                <Link to="/">Dummy product</Link>
               </li>
               <li className=" basket-card quantity">5</li>
               <li className=" basket-card price">120</li>
@@ -34,7 +34,7 @@ const Basket = () => {
               <li className=" basket-card price">50</li>
               <li className=" basket-card currency">GBP</li>
             </li>
-            <BasketItem />
+            {/* test ?? <BasketItem name="something" quatity="1" price="100" /> */}
           </ul>
         </section>
         <section className="flex-col" id="checkout">
