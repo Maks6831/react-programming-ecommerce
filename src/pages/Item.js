@@ -5,8 +5,11 @@ import { useParams } from "react-router";
 import itemInfo from "../itemInfo.json"
 import Productrenderer from "../components/Productrenderer";
 import Product from "../components/Product";
+import "../styles/Item.css";
+
 const Item = () => {
-    const [currentItem, setCurrentItem] = useState([])
+    const [currentItem, setCurrentItem] = useState([]);
+    const [kitItems, setKitItems] = useState([]);
     const [relatedItems, setRelatedItems] = useState([]);
     const { item } = useParams()
     useEffect(()=>{
@@ -15,19 +18,9 @@ const Item = () => {
     },[item])
     useEffect(()=>{
         
-        setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))  
+        setKitItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))
+        setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.type === obj.type && currentItem[0]?.name !== obj.name)))  
     },[currentItem])
-    
-
-    
-
-    
-    
-    
-
-    
-
-    
     
     
     return (
@@ -42,10 +35,10 @@ const Item = () => {
 
 
     />}
-
-            <h1>Other items to this item</h1>
-            <div style={{display: "flex", flexDirection: "row"}}>
-            {relatedItems.map((item)=>(<Product
+            <div className="item-products">
+            <h1>Other products in the {currentItem[0]?.level} kit</h1>
+            <div className="related-items">
+            {kitItems.map((item)=>(<Product
             id={item.id}
             key={item.id}
             name={item.name}
@@ -55,6 +48,28 @@ const Item = () => {
             
             />))
             }
+            </div>
+            
+            </div>
+            <div className="item-products">
+                <h1>Checkout our other {currentItem[0]?.type}s</h1>
+                <div className="related-items">
+                {relatedItems.map((item)=>(<Product
+            id={item.id}
+            key={item.id}
+            name={item.name}
+            image={item.image}
+            description={item.description}
+            price={item.price}
+            
+            />))
+            }
+            </div>
+                
+            </div>
+            <div className="comment-section">
+                <h2>Reviews</h2>
+                <p>There are currently no review for the {currentItem[0]?.name}</p>
             </div>
             
 
