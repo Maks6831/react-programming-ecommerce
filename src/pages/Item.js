@@ -6,13 +6,22 @@ import itemInfo from "../itemInfo.json"
 import Productrenderer from "../components/Productrenderer";
 import Product from "../components/Product";
 const Item = () => {
-    const [currentItem, setCurrentItem] = useState({})
-    const [relatedItems, setRelatedItems] = useState({});
+    const [currentItem, setCurrentItem] = useState([])
+    const [relatedItems, setRelatedItems] = useState([]);
     const { item } = useParams()
     useEffect(()=>{
-        setCurrentItem(itemInfo.filter((id)=>((id.name === item))))
-        setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0].name !== obj.name)))  
-    },[])
+        setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
+          
+    },[item])
+    useEffect(()=>{
+        
+        setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))  
+    },[currentItem])
+    
+
+    
+
+    
     
     
 
@@ -23,7 +32,7 @@ const Item = () => {
     
     return (
         <div>
-            <Productrenderer
+            {<Productrenderer
             
             name={currentItem[0]?.name}
             key={currentItem[0]?.id}
@@ -32,9 +41,10 @@ const Item = () => {
             image={currentItem[0]?.image}
 
 
-            />
+    />}
 
-            <h1>Other {currentItem[0].level} items to this item</h1>
+            <h1>Other items to this item</h1>
+            <div style={{display: "flex", flexDirection: "row"}}>
             {relatedItems.map((item)=>(<Product
             id={item.id}
             key={item.id}
@@ -45,6 +55,7 @@ const Item = () => {
             
             />))
             }
+            </div>
             
 
         </div>
