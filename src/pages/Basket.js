@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import "../styles/Basket.css";
 
+import BasketItem from "../components/BasketItem";
+
 const Basket = () => {
   return (
     <div id="test-div">
@@ -32,6 +34,7 @@ const Basket = () => {
               <li className=" basket-card price">50</li>
               <li className=" basket-card currency">GBP</li>
             </li>
+            <BasketItem />
           </ul>
         </section>
         <section className="flex-col" id="checkout">
