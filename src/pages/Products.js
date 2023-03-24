@@ -26,7 +26,7 @@ const Products = () => {
 
             {productArray.map((item)=>(
             <Product
-            key={item.id}
+            key={item.id} 
             id={item.id}
             name={item.name}
             image={item.image}
