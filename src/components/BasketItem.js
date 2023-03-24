@@ -1,14 +1,14 @@
-import React from "react";
+import React, { Link } from "react";
 import "../styles/Basket.css";
 
-export default function BasketItem({}) {
+export default function BasketItem({ name, quantity, price }) {
   return (
     <li className=" flex-row item">
       <li className=" basket-card name">
-        <a href="/">Basket ITem</a>
+        <Link to="/">{name}</Link>
       </li>
-      <li className=" basket-card quantity">5</li>
-      <li className=" basket-card price">120</li>
+      <li className=" basket-card quantity">{quantity}</li>
+      <li className=" basket-card price">{price}</li>
       <li className=" basket-card currency">GBP</li>
     </li>
   );
