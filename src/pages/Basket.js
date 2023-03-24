@@ -6,7 +6,7 @@ import "../styles/Basket.css"
 export default function Basket() {
 
   const [ localData, setLocalData] = useState([])
-  const [ savedProducts, setSavedProducts] = useState([])
+
 
   useEffect(() => {
  
@@ -30,19 +30,14 @@ export default function Basket() {
     }
      
 }, [localData])
-    
-      
-   
 
-  return (
+function clearLocalStorage() {
+  localStorage.clear()
+  setLocalData([])
+}
 
-    <div id="test-div">
-    <section id="basket-container">
-      <h1 id="basket-h1">
-        <span>[</span> Your Basket <span>]</span>
-      </h1>
-      <section className="flex-col">
-        <ul className=" flex-col item-list" id="basket">
+function removeLocalItem(productToRemove) {
+  localStorage.removeItem(productToRemove.id)
           <ul className="flex-row item-header">
             <li className="head name-col">Items</li>
             <li className="head quantity-col">Quantity</li>
@@ -56,8 +51,8 @@ export default function Basket() {
               key={product.id}
               productID={product.id}
               name={product.name}
-              
               price={product.price}
+              removeLocalItem={() => removeLocalItem(product)}
               />
             ))}
           </ul>
@@ -68,6 +63,7 @@ export default function Basket() {
      <h2>
            Total: <span>500</span> GBP
          </h2>
+         <button className="clearCart-btn" onClick={clearLocalStorage}> Clear Basket </button>
      <button className="checkout-btn">Checkout</button>
       <Link to="/products" className="purple-link">
      Continue Shopping
