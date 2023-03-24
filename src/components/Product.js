@@ -14,11 +14,11 @@ const Product = (props) => {
 
  
 
-    useEffect(() => {
-        if (productID) {
-            console.log(productID)
-        }
-    }, [productID])
+    // useEffect(() => {
+    //     if (productID) {
+    //         console.log(productID)
+    //     }
+    // }, [productID])
     
 
     function hideModal() {
@@ -37,14 +37,14 @@ const Product = (props) => {
         // Find the ID and add it to the savedProducts array
         const productToAdd = itemInfo.find(product => product.id === findProductID)
         savedProducts.push(productToAdd)
-        console.log('productID: ' + findProductID)
+        // console.log('productID: ' + findProductID)
         localStorage.setItem('savedProducts', JSON.stringify(savedProducts))
-        console.log('Storage Array: ' + JSON.stringify(savedProducts))
+        // console.log('Storage Array: ' + JSON.stringify(savedProducts))
         setShowModal(true)
     }
 
     function goToBasket() {
-        window.location.replace('../pages/Basket')
+        window.location.replace('../basket')
       }
 
     return (
