@@ -56,3 +56,9 @@ h5 {
     flex-direction: row;
     margin-top: 25px;
 }
+
+.title-section {
+    text-align: center;
+    margin: 30px;
+    
+}
