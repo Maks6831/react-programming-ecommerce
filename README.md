@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# README FILE GENERATOR
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+![](https://img.shields.io/badge/HTML5-black?style=flat&logo=html5&logoWidth=23)
+![](https://img.shields.io/badge/CSS3-black?style=flat&logo=css3&logoWidth=23)
+![](https://img.shields.io/badge/Javascript-black?style=flat&logo=javascript&logoWidth=23)
+![](https://img.shields.io/badge/Node.js-black?style=flat&logo=nodedotjs&logoWidth=23)
+![](https://img.shields.io/badge/React-black?style=flat&logo=createreactapp&logoWidth=23)
+![](https://img.shields.io/badge/Firebase-black?style=flat&logo=firebase&logoWidth=23)
 
-In the project directory, you can run:
+## 🚩 TABLE OF CONTENT
 
-### `npm start`
+- [Description](#-description)
+- [Usage](#-usage)
+- [Technology used](#-technology-used)
+- [Installation](#-installation)
+- [Tests](#-tests)
+- [Credits](#-credits)
+- [Contributing](#-contributing)
+- [Questions](#-questions)
+- [License](#-license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 DESCRIPTION
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🎯 What is it about?
 
-### `npm test`
+### 🔍 Preview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following image shows the web application's appearance:
 
-### `npm run build`
+![Project image](./add/path/to/image)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💻 USAGE
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 💬 User story
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`As a user...`
 
-### `npm run eject`
+### 💬 Main functionalities
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+///
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✅ TECHNOLOGY USED
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Javascript
+- Node.js
+- React
+- Firebase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 INSTALLATION
 
-## Learn More
+No installation is required.
+[You can visit the page via this link](https//bytebazaar.netlify.app)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✅ TESTS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+No tests available at the moment.
 
-### Code Splitting
+## 💬 CREDITS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Ebay](https://ebay.co.uk) & [Pixabay](https://pixabay.com)- Product images
+- [icon-icons](https://icon-icons.com/) - Icons
 
-### Analyzing the Bundle Size
+## ✨ CONTRIBUTING
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+All contributions are welcome. Contribution guidelines will be available soon.
 
-### Making a Progressive Web App
+## ❔ QUESTIONS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- If you have any questions, [please click here to send us an email.](mailto:bytebazaar@gmail.com)
 
-### Advanced Configuration
+## 📃 LICENSE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This application is covered under MIT License.
