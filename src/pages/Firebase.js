@@ -9,17 +9,16 @@ import 'firebase/compat/auth'
 //     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 //     messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 //     appId: process.env.REACT_APP_FIREBASE_APP_ID,
-//     measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+//    
 // });
 
 const firebaseConfig = firebase.initializeApp({
-  apiKey: "AIzaSyBoBUOhBF-v4WVdbu-2hTftswlMFJDXRHE",
-  authDomain: "bytesbazaar-3c7e5.firebaseapp.com",
-  projectId: "bytesbazaar-3c7e5",
-  storageBucket: "bytesbazaar-3c7e5.appspot.com",
-  messagingSenderId: "1097803672920",
-  appId: "1:1097803672920:web:e5d8ee330c0b9d96b0092d",
-  measurementId: "G-5EJ0XDXS2C"
+  apiKey: "AIzaSyCD36Wkf4CD1giYm5JJP9MH-0AkP596h8c",
+  authDomain: "bytebazaar-fde7e.firebaseapp.com",
+  projectId: "bytebazaar-fde7e",
+  storageBucket: "bytebazaar-fde7e.appspot.com",
+  messagingSenderId: "100325766004",
+  appId: "1:100325766004:web:50da3f721d889e89b1f221"
 })
 
 export const auth = firebaseConfig.auth()
