@@ -7,6 +7,10 @@ import "../styles/Basket.css";
 export default function Basket() {
   // The state used to control this component
   const [localData, setLocalData] = useState([]);
+
+  // state use to control the total price of all items in the basket
+  const [totalPrice, setTotalPrice] = useState(0);
+
   // Sets the variable localData to include the LocalStorage object
   useEffect(() => {
     setLocalData(JSON.parse(localStorage.getItem("savedProducts")) || []);
@@ -17,7 +21,7 @@ export default function Basket() {
   useEffect(() => {
     if (localData.length > 0) {
       let localProducts = [];
-      for (let i = 0; i > localData.length; i++) {
+      for (let i = 0; i < localData.length; i++) {
         localProducts.push({
           id: localData[i].id,
           name: localData[i].name,
@@ -25,6 +29,14 @@ export default function Basket() {
           image: localData[i].image,
         });
       }
+      //Update total price accordingly
+      setTotalPrice(
+        localProducts
+          .reduce((total, product) => total + parseFloat(product.price), 0)
+          .toFixed(2)
+      );
+    } else {
+      setTotalPrice(0);
     }
   }, [localData]);
   // Enables us to clear localStorage and the arrays. Allowing for a remove all button
@@ -74,7 +86,7 @@ export default function Basket() {
         </section>
         <section className="flex-col" id="checkout">
           <h2>
-            Total: <span>500</span> GBP
+            Total: <span>{totalPrice}</span> GBP
           </h2>
           <button className="clearCart-btn" onClick={clearLocalStorage}>
             {" "}
