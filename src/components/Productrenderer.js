@@ -4,10 +4,10 @@ import '../styles/Productrenderer.css'
 const Productrenderer = (props) => {
     return (
         <div>
-            <div className="item-section">
-            <h1 className="item-h1-tag">{props.name}</h1>
+            <div className="item-section fade-in">
+            <h1 className="item-h1-tag fade-in-2">{props.name}</h1>
         
-        <div className="info">
+        <div className="info fade-in-3">
         
         <img src={props.image} className="item-image" alt='itemImage'/> 
         
