@@ -1,13 +1,76 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
 import itemInfo from "../itemInfo.json";
+import DropDownMenu from "../components/Dropdownmenu";
 
 const Products = () => {
+    const [productArray, setProductArray] = useState(itemInfo);
+    const [filterDisplay, setFilterDisplay] =useState('');
+    const [filterName, setFilterName] = useState('')
+    const [open, setOpen] = useState(false);
+    const handleButton = (e) => {
+        setOpen(!open);
+        switch(e.target.value){
+            case 'all':
+                setFilterName('All Products');
+            break;
+            case 'keyboard':
+                setFilterName('Keyboards');
+            break;
+            case 'mouse':
+                setFilterName('Mice');
+            break;
+            case '':
+                setFilterName('Keyboards');
+            break;
+            case 'monitor':
+                setFilterName('Monitors');
+            break
+            case 'chair':
+                setFilterName('chairs');
+            break;
+            case 'Ninja':
+                setFilterName('Your looking at the ninja kit');
+            break
+            case 'Newbie':
+                setFilterName('Your looking at the Newbie kit');
+            break
+            case 'Master':
+                setFilterName('Your looking at the Merge Master kit');
+            break
+            default: 
+                setFilterName('')
+
+        }
+        e.target.value === "all" ? setProductArray(itemInfo) && setFilterName('') :  setProductArray(itemInfo.filter((item)=>(item.level === e.target.value || e.target.value === item.type )))
+       
+    }
+    
+    
+
+
     return (
+<<<<<<< HEAD
         <div className="product-container">
             {itemInfo.map((item)=>(
+=======
+        <div>
+            <div className="title-section">
+            <h1>Checkout Our Products</h1>
+            <div className="filter-section">
+                <div onClick={()=> setOpen(!open)}>Filter
+                {open && <DropDownMenu handleButton={handleButton}/>} 
+                </div>
+                <h2>{filterName}</h2>
+            </div>
+
+            </div>
+            
+
+            {productArray.map((item)=>(
+>>>>>>> main
             <Product
-            key={item.id}
+            key={item.id} 
             id={item.id}
             name={item.name}
             image={item.image}
