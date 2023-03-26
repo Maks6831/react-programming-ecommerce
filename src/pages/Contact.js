@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 // import "../styles/About.css";
-import "../styles/Home.css";
+import "../styles/oldHome.css";
 import "../styles/Contact.css";
 
 const Contact = () => {
