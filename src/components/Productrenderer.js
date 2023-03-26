@@ -7,7 +7,7 @@ const Productrenderer = (props) => {
             <div className="item-section fade-in">
             <h1 className="item-h1-tag fade-in-2">{props.name}</h1>
         
-        <div className="info fade-in-3">
+        <div className="info fade-in-2">
         
         <img src={props.image} className="item-image" alt='itemImage'/> 
         
