@@ -56,7 +56,7 @@ export default function ContactForm() {
         <hr />
 
         <form
-          className="form"
+          className="form "
           onSubmit={handleSubmit}
           action="https://api.web3forms.com/submit"
           method="POST"

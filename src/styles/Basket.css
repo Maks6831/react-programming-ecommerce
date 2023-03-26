@@ -1,4 +1,4 @@
-#test-div {
+#wrapper {
   display: flex;
   justify-content: center;
 }
@@ -42,6 +42,10 @@
 .item-list {
   list-style-type: none;
   height: auto;
+}
+
+li {
+  list-style: none;
 }
 
 a {
