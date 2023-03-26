@@ -50,10 +50,6 @@ const Products = () => {
 
 
     return (
-<<<<<<< HEAD
-        <div className="product-container">
-            {itemInfo.map((item)=>(
-=======
         <div>
             <div className="title-section">
             <h1>Checkout Our Products</h1>
@@ -65,10 +61,8 @@ const Products = () => {
             </div>
 
             </div>
-            
-
+            <div className="product-container">
             {productArray.map((item)=>(
->>>>>>> main
             <Product
             key={item.id} 
             id={item.id}
@@ -80,6 +74,11 @@ const Products = () => {
             type={item.type}
             
             />))}
+
+            </div>
+            
+
+            
         </div>
     )
 }
