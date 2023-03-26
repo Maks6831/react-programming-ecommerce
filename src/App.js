@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './styles/App.css';
 import Header from './components/Header';
@@ -8,9 +9,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Basket from './pages/Basket';
 import Item from './pages/Item';
-
-
-
 
 function App() {
   return (

@@ -1,22 +1,16 @@
 import React from "react";
-import "../styles/About.css";
-import "../styles/Home.css";
+import "../styles/oldHome.css";
 import { Link } from "react-router-dom";
-import Achero from "../components/Achero";
 
-const About = () => {
+const oldHome = () => {
   return (
     <div>
-      <Achero />
-      <section id="about-section">
-        <p className="about-description">
-          At ByteBazaar, we offer a wide range of high-quality equipment and
-          accessories from top brands for your coding needs. Our e-commerce
-          platform provides a secure and convenient shopping experience, and our
-          customer support team is always available to assist you. Join our
-          community today and elevate your coding setup!
-        </p>
-      </section>
+      <div className="Hero">
+        <div className="heroOpacity">
+          <h1>Welcome to our page</h1>
+          <p>Please enjoy everything</p>
+        </div>
+      </div>
       <div className="buttonContainer">
         <Link to="/products" className="productButton">
           Discover our Products
@@ -44,4 +38,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default oldHome;
