@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
 import itemInfo from "../itemInfo.json";
 import DropDownMenu from "../components/Dropdownmenu";
+import '../styles/Products.css'
 
 const Products = () => {
     const [productArray, setProductArray] = useState(itemInfo);
@@ -57,7 +58,7 @@ const Products = () => {
                 <div onClick={()=> setOpen(!open)}>Filter
                 {open && <DropDownMenu handleButton={handleButton}/>} 
                 </div>
-                <h2>{filterName}</h2>
+                <h2 className='title-h2'>{filterName}</h2>
             </div>
 
             </div>
