@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import itemInfo from "../itemInfo.json";
 import { useAppState } from '../providers/app-state'
 import '../styles/Products.css';
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 
@@ -12,14 +13,7 @@ const Product = (props) => {
 
     const [showModal, setShowModal] = useState(false);
     const {formData, productID, setProductID} = useAppState()
-
- 
-
-    // useEffect(() => {
-    //     if (productID) {
-    //         console.log(productID)
-    //     }
-    // }, [productID])
+    const [aosData, setAosData]= useState('fade-up');
     
 
     function hideModal() {
@@ -49,7 +43,7 @@ const Product = (props) => {
       }
 
       return (
-        <div className="Card">
+        <div className="Card" data-aos={`${aosData}`}>
             <Link to={`/products/${props.name}`}>
             <div className="product-image-wrapper">
             <img src={props.image} alt='productPicture' className="product-image" />

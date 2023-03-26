@@ -5,6 +5,7 @@ import cartImage from '../images/image17.png'
 import { useAuth, AuthProvider, AuthContext } from "../contexts/AuthContext";
 import { auth, provider } from "../pages/Firebase";
 
+
 const Navbar = () => {
   const { currentUser, logout, signupWithGoogle } = useAuth();
 

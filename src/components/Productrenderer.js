@@ -1,10 +1,12 @@
 import React from "react";
 import '../styles/Productrenderer.css'
 
+
+
 const Productrenderer = (props) => {
     return (
         <div>
-            <div className="item-section fade-in">
+            <div className="item-section fade-in" >
             <h1 className="item-h1-tag fade-in-2">{props.name}</h1>
         
         <div className="info fade-in-2">

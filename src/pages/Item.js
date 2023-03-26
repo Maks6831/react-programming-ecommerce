@@ -8,6 +8,8 @@ import Product from "../components/Product";
 import "../styles/Item.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import UseScrollToTop from "../components/ScrollToTop";
+
 
 const Item = () => {
     const [currentItem, setCurrentItem] = useState([]);
@@ -27,7 +29,7 @@ const Item = () => {
     
     
     return (
-        <div>
+        <div ref={UseScrollToTop()} style={{paddingTop: '10px'}}>
             {<Productrenderer
             
             name={currentItem[0]?.name}
