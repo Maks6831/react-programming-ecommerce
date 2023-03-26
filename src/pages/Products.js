@@ -4,7 +4,7 @@ import itemInfo from "../itemInfo.json";
 
 const Products = () => {
     return (
-        <div>
+        <div className="product-container">
             {itemInfo.map((item)=>(
             <Product
             key={item.id}

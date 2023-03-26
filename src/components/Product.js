@@ -3,6 +3,7 @@ import '../styles/Product.css'
 import { Link } from "react-router-dom";
 import itemInfo from "../itemInfo.json";
 import { useAppState } from '../providers/app-state'
+import '../styles/Products.css';
 
 
 
@@ -47,10 +48,15 @@ const Product = (props) => {
         window.location.replace('../basket')
       }
 
-    return (
+      return (
         <div className="Card">
             <Link to={`/products/${props.name}`}>
+            <div className="product-image-wrapper">
             <img src={props.image} alt='productPicture' className="product-image" />
+            <div className="product-image-overlay">
+              <p>Click here for more info</p>
+            </div>
+          </div>
             </Link>
             <Link>
             <p className="p-tag">{props.name}</p>
