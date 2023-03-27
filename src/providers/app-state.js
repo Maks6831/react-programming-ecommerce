@@ -29,6 +29,9 @@ export function AppStateProvider({ children }) {
   });
   const [success, setSuccess] = useState(false);
 
+  const [isHiddenForm, setIsHiddenForm] = useState(false);
+  const [isHiddenFeedback, setIsHiddenFeedback] = useState(true);
+
   // create a value object which gathers all states and their updaters
   const value = {
     state,
@@ -39,6 +42,10 @@ export function AppStateProvider({ children }) {
     setSuccess,
     productID,
     setProductID,
+    isHiddenForm,
+    setIsHiddenForm,
+    isHiddenFeedback,
+    setIsHiddenFeedback,
   };
 
   return (

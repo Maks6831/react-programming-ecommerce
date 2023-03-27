@@ -7,6 +7,7 @@ import { useAppState } from "../providers/app-state";
 export default function ContactForm() {
   const { formData, setFormData } = useAppState();
   const { success, setSuccess } = useAppState();
+  const { isHiddenForm, setIsHiddenForm } = useAppState();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -56,7 +57,8 @@ export default function ContactForm() {
         <hr />
 
         <form
-          className="form "
+          className=""
+          id="form "
           onSubmit={handleSubmit}
           action="https://api.web3forms.com/submit"
           method="POST"
@@ -106,9 +108,19 @@ export default function ContactForm() {
             />
           </div>
 
-          <button id="submit-btn">Send</button>
-          {success && alert("Thank you for contacting us!😎")}
+          <button id="submit-btn" aria-label="Send message">
+            Send
+          </button>
+          {/* {success && alert("Thank you for contacting us!😎")} */}
         </form>
+        {success && (
+          <div id="form-feedback-card">
+            <p id="form-feedback">Than</p>
+            <button id="clear-feedback" aria-label="Close feedback">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        )}
       </div>
     </>
   );
