@@ -29,6 +29,10 @@ export function AppStateProvider({ children }) {
   });
   const [success, setSuccess] = useState(false);
 
+  const [isHiddenForm, setIsHiddenForm] = useState(false);
+  const [isHiddenFeedback, setIsHiddenFeedback] = useState(true);
+  const [h2Text, setH2Text] = useState("Contact us");
+
   // create a value object which gathers all states and their updaters
   const value = {
     state,
@@ -39,6 +43,12 @@ export function AppStateProvider({ children }) {
     setSuccess,
     productID,
     setProductID,
+    isHiddenForm,
+    setIsHiddenForm,
+    isHiddenFeedback,
+    setIsHiddenFeedback,
+    h2Text,
+    setH2Text,
   };
 
   return (
