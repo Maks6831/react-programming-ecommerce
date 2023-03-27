@@ -11,6 +11,7 @@
     border-radius: 5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     margin: 10px;
+    height: 416px;
     
   }
 
@@ -25,7 +26,7 @@
   
   .product-image {
     width: 100%;
-    height: auto;
+    height: 282px;
     border-radius: 5px;
   }
   

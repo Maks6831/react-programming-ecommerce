@@ -51,7 +51,7 @@ const Products = () => {
 
 
     return (
-        <div>
+        <div style={{minHeight: '80vh'}}>
             <div className="title-section">
             <h1>Checkout Our Products</h1>
             <div className="filter-section">
