@@ -78,6 +78,7 @@ export default function Basket() {
                   productID={product.id}
                   name={product.name}
                   price={product.price}
+                  quantity="1"
                   removeLocalItem={() => removeLocalItem(product.id)}
                 />
               ))}
