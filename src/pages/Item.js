@@ -18,10 +18,10 @@ const Item = () => {
     const { item } = useParams()
     useEffect(()=>{
         setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
-          
+        AOS.init({duration:2000});  
     },[item])
     useEffect(()=>{
-        AOS.init({duration:2000});
+        
         
         setKitItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))
         setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.type === obj.type && currentItem[0]?.name !== obj.name)))  
