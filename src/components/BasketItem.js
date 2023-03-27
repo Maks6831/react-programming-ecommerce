@@ -12,7 +12,7 @@ export default function BasketItem({ name, quantity, price, removeLocalItem }) {
       <li className=" basket-card price">£{price}</li>
       <li className=" basket-card remove-item-li">
         <button
-          className="remove"
+          className="remove "
           onClick={removeLocalItem}
           aria-label="Remove item from basket"
         >

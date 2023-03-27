@@ -64,10 +64,7 @@ export default function Basket() {
           <h1 id="basket-h1">
             <span>[</span> Your Basket <span>]</span>
           </h1>
-          <button
-            className="clearCart-btn .purple-link"
-            onClick={clearLocalStorage}
-          >
+          <button className="clearCart-btn" onClick={clearLocalStorage}>
             Clear Basket
           </button>
         </div>

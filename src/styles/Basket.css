@@ -1,6 +1,8 @@
 #wrapper {
   display: flex;
   justify-content: center;
+  padding: 3rem 1rem;
+  height: 100%;
 }
 
 #basket-container {
@@ -69,7 +71,8 @@ a {
 }
 
 .item-header {
-  padding: 0.5rem;
+  padding: 2rem 0.5rem;
+  font-size: 1.4rem;
 }
 
 .basket-card {
@@ -81,7 +84,6 @@ a {
 }
 
 .basket-card,
-.head,
 .remove {
   font-size: 1.3rem;
   font-weight: 400;
@@ -96,6 +98,19 @@ a {
   height: 100%;
   cursor: pointer;
   padding: 0.5rem;
+  border: none;
+}
+
+.clearCart-btn {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  color: black;
+  background-color: #e9e9ed;
+  /* border-radius: 3.5rem; */
+  border: none;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------------------*/
@@ -114,7 +129,7 @@ a {
   height: 3.3rem;
   left: 30%;
   font-size: 1.3rem;
-  border-radius: 5.5rem;
+  /* border-radius: 5.5rem; */
   padding: 0.8rem;
   margin: 1rem;
   border: none;
@@ -129,13 +144,4 @@ a {
 
 .basket-top {
   justify-content: space-between;
-}
-
-.clearCart-btn {
-  cursor: pointer;
-  padding: 1rem 1.7rem;
-  color: white;
-  background-color: #4c12a1;
-  border-radius: 3.5rem;
-  font-size: 1.2rem;
 }
