@@ -39,16 +39,19 @@ export default function ContactForm() {
       .then((res) => res.json())
       .then((data) => {
         setSuccess(true);
-        setH2Text(`Hello ${userName}`);
-        setFormData((prevFormData) => ({
-          ...prevFormData,
-          name: "",
-          email: "",
-          message: "",
-        }));
-
         setIsHiddenForm(!isHiddenForm);
         setIsHiddenFeedback(!isHiddenFeedback);
+
+        setTimeout(() => {
+          setH2Text(`Hello ${userName}`);
+          setFormData((prevFormData) => ({
+            ...prevFormData,
+            name: "",
+            email: "",
+            message: "",
+          }));
+        }, 5000);
+
         // setTimeout(() => {
         //   setSuccess(false);
         // }, 10000);
