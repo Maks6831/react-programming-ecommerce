@@ -69,7 +69,7 @@ export default function Basket() {
               <li className="head name-col">Items</li>
               <li className="head quantity-col">Quantity</li>
               <li className="head price-col">Price</li>
-              <li className="head currency-col"> </li>
+              <li className="head button-col"> Update basket</li>
             </ul>
             <ul className="basket">
               {localData?.map((product) => (
@@ -87,7 +87,7 @@ export default function Basket() {
         </section>
         <section className="flex-col" id="checkout">
           <h2>
-            Total: <span>{totalPrice}</span> GBP
+            Total: <span>£{totalPrice}</span>
           </h2>
           <button className="clearCart-btn" onClick={clearLocalStorage}>
             {" "}

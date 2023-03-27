@@ -5,7 +5,7 @@
 
 #basket-container {
   width: 60%;
-  height: 80vh;
+  height: 100%;
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -54,7 +54,6 @@ a {
 }
 
 /*Single item row*/
-
 .item .name,
 .name-col {
   width: 40%;
