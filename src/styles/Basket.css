@@ -78,7 +78,14 @@ a {
   border-radius: 0.5rem;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
-  /* border: 1px solid rgba(0, 0, 0, 0.23); */
+}
+
+.basket-card,
+.head,
+.remove {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .remove-item-li {
@@ -92,6 +99,11 @@ a {
 }
 
 /* ---------------------*/
+
+#total-amount {
+  padding: 1rem;
+}
+
 #checkout {
   padding: 5rem;
   align-items: center;
@@ -113,4 +125,17 @@ a {
 
 .purple-link {
   color: #4c12a1;
+}
+
+.basket-top {
+  justify-content: space-between;
+}
+
+.clearCart-btn {
+  cursor: pointer;
+  padding: 1rem 1.7rem;
+  color: white;
+  background-color: #4c12a1;
+  border-radius: 3.5rem;
+  font-size: 1.2rem;
 }
