@@ -6,6 +6,10 @@ import itemInfo from "../itemInfo.json"
 import Productrenderer from "../components/Productrenderer";
 import Product from "../components/Product";
 import "../styles/Item.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import UseScrollToTop from "../components/ScrollToTop";
+
 
 const Item = () => {
     const [currentItem, setCurrentItem] = useState([]);
@@ -14,9 +18,10 @@ const Item = () => {
     const { item } = useParams()
     useEffect(()=>{
         setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
-          
+        AOS.init({duration:2000});  
     },[item])
     useEffect(()=>{
+        
         
         setKitItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))
         setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.type === obj.type && currentItem[0]?.name !== obj.name)))  
@@ -24,7 +29,7 @@ const Item = () => {
     
     
     return (
-        <div>
+        <div ref={UseScrollToTop()} style={{paddingTop: '10px'}}>
             {<Productrenderer
             
             name={currentItem[0]?.name}
@@ -35,7 +40,7 @@ const Item = () => {
 
 
     />}
-            <div className="item-products">
+            <div className="item-products" data-aos="fade-up">
             <h1>Other products in the {currentItem[0]?.level} kit</h1>
             <div className="related-items">
             {kitItems.map((item)=>(<Product
@@ -51,7 +56,7 @@ const Item = () => {
             </div>
             
             </div>
-            <div className="item-products">
+            <div className="item-products" data-aos="fade-up">
                 <h1>Checkout our other {currentItem[0]?.type}s</h1>
                 <div className="related-items">
                 {relatedItems.map((item)=>(<Product

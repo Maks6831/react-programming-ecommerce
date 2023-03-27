@@ -3,7 +3,9 @@ import '../styles/Product.css'
 import { Link } from "react-router-dom";
 import itemInfo from "../itemInfo.json";
 import { useAppState } from '../providers/app-state'
-
+import '../styles/Products.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 
@@ -12,14 +14,9 @@ const Product = (props) => {
     const [showModal, setShowModal] = useState(false);
     const {formData, productID, setProductID} = useAppState()
 
- 
-
-    // useEffect(() => {
-    //     if (productID) {
-    //         console.log(productID)
-    //     }
-    // }, [productID])
-    
+    useEffect(()=>{
+      AOS.init({duration:2000});
+    },[])
 
     function hideModal() {
       setShowModal(false);
@@ -47,10 +44,15 @@ const Product = (props) => {
         window.location.replace('../basket')
       }
 
-    return (
-        <div className="Card">
+      return (
+        <div className="Card" data-aos="fade-up">
             <Link to={`/products/${props.name}`}>
+            <div className="product-image-wrapper">
             <img src={props.image} alt='productPicture' className="product-image" />
+            <div className="product-image-overlay">
+              <p>Click here for more info</p>
+            </div>
+          </div>
             </Link>
             <Link>
             <p className="p-tag">{props.name}</p>
