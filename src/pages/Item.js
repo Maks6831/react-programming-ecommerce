@@ -50,6 +50,7 @@ const Item = () => {
             image={item.image}
             description={item.description}
             price={item.price}
+            item={true}
             
             />))
             }
@@ -66,6 +67,7 @@ const Item = () => {
             image={item.image}
             description={item.description}
             price={item.price}
+            item={true}
             
             />))
             }
