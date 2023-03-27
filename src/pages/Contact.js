@@ -15,8 +15,9 @@ const Contact = () => {
           </h1>
         </div>
       </section>
-
-      <ContactForm />
+      <section id="contact-section">
+        <ContactForm />
+      </section>
     </>
   );
 };
