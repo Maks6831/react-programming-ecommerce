@@ -5,6 +5,23 @@
 
 }
 
+.hidden {
+    display: none;
+}
+
+.brand-hamburger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: none;
+}
+
+
+
 .not-rendered:hover {
     background: rgb(255, 255, 255 ,0.5);
 
@@ -75,6 +92,12 @@ nav h1 {
 }
 
 @media only screen and (max-width: 730px) {
+
+    .icon {
+        display: inline;
+        margin-right: 10px;
+        height:1.2rem;
+    }
 
     .navBar {
       flex-direction: column;
