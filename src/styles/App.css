@@ -10,4 +10,9 @@ body {
   margin: 0px;
   min-height: 100%;    
   line-height: 1;
+
+}
+
+#root {
+  min-height: 100%;
 }
