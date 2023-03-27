@@ -25,6 +25,8 @@
 
 ### 🎯 What is it about?
 
+This is a React-based e-commerce website that includes features such as user login, product listings, shopping cart and a contact form.
+
 ### 🔍 Preview
 
 The following image shows the web application's appearance:
@@ -43,10 +45,10 @@ The following image shows the web application's appearance:
 
 ## ✅ TECHNOLOGY USED
 
-- Javascript
-- Node.js
-- React
-- Firebase
+[] Javascript
+[] Node.js
+[] React
+[] Firebase
 
 ## 🚀 INSTALLATION
 
