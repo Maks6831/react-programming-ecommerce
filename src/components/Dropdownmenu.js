@@ -14,9 +14,9 @@ const DropDownMenu = (props) => {
             </div>
             <div className="kits">
                 <div className="drop-titles db-1">Kits</div>
-                <button value="Ninja" className="drop-button db-2" onClick={props.handleButton}>Ninja</button>
-                <button value="Newbie" className="drop-button db-3" onClick={props.handleButton}>Newbie</button>
-                <button value="Master" className="drop-button db-4" onClick={props.handleButton}>Merge Master</button>
+                <button value="Ninja" className="drop-button db-2 kit" onClick={props.handleButton}>Ninja</button>
+                <button value="Newbie" className="drop-button db-3 kit" onClick={props.handleButton}>Newbie</button>
+                <button value="Master" className="drop-button db-4 kit" onClick={props.handleButton}>Merge Master</button>
             </div>
             
         

@@ -1,14 +1,19 @@
 .dropdown-div {
-    
+    position: absolute;
+    top: 0;
+    left: 25%;
     display: flex;
     flex-direction: row;
-    max-width: 400px;
+    max-width: 50%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     border-radius: 5px;
     text-align: center;
     animation: growTop 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
     transform-origin: top center;
     overflow: hidden;
+    z-index: 30;
+    background-color: white;
+    margin: auto 15%;
 }
 
 @keyframes growTop {
@@ -38,4 +43,16 @@
 
 .drop-button:hover {
     background-color: #f2f2f2;
+}
+
+.kit {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
 }

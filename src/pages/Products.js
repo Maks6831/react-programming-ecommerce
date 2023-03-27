@@ -55,8 +55,8 @@ const Products = () => {
             <div className="title-section">
             <h1>Checkout Our Products</h1>
             <div className="filter-section">
-                <div onClick={()=> setOpen(!open)}>Filter
-                {open && <DropDownMenu handleButton={handleButton}/>} 
+                <div onClick={()=> setOpen(!open)} className="filter-container">Filter
+                <div>{open && <DropDownMenu handleButton={handleButton}/>}</div> 
                 </div>
                 <h2 className='title-h2'>{filterName}</h2>
             </div>

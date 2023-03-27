@@ -21,6 +21,7 @@
     justify-content: space-between;
     max-width: 100%;
     margin: 0 auto;
+    
   }
   
   @media (max-width: 1024px) {
@@ -38,4 +39,11 @@
 
   .title-h2 {
     padding: 20px;
+  }
+
+  .filter-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
   }
