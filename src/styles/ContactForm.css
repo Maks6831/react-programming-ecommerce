@@ -12,12 +12,30 @@
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
 }
 
-#form {
+.form,
+.form-feedback-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0.5rem;
   font-size: 1.3rem;
+}
+
+.form-feedback-card {
+  line-height: 2;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+#clear-feedback {
+  width: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .form-input-group {
@@ -101,7 +119,13 @@
   background-color: black;
 }
 
-/*Media queries*/
+/*------feedback------*/
+
+.hidden {
+  display: none;
+}
+
+/*--------Media queries-----------*/
 
 @media (max-width: 768px) {
   .form-container {
@@ -135,9 +159,4 @@
     left: 10%;
     font-size: 1.1rem;
   }
-}
-
-/***********/
-.hidden {
-  display: none;
 }
