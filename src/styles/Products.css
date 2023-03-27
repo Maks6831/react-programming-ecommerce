@@ -19,13 +19,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
   }
   
   @media (max-width: 1024px) {
     .product-container {
       justify-content: center;
+      max-width: 100%;
     }
   }
   
@@ -33,6 +34,7 @@
     .product-container {
       flex-direction: column;
       align-items: center;
+      max-width: 100%;
     }
   }
 

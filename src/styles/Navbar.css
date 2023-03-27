@@ -5,6 +5,23 @@
 
 }
 
+.hidden {
+    display: none;
+}
+
+.brand-hamburger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: none;
+}
+
+
+
 .not-rendered:hover {
     background: rgb(255, 255, 255 ,0.5);
 
@@ -73,3 +90,62 @@ nav h1 {
   justify-content: center;
 
 }
+
+@media only screen and (max-width: 730px) {
+
+    .icon {
+        display: inline;
+        margin-right: 10px;
+        height:1.2rem;
+    }
+
+    .navBar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .buttonContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .buttons {
+      padding: 5px;
+      width: 100%;
+      margin: 5px;
+      text-align: center;
+      background-color: rgb(99, 98, 98);
+      font-size: 14px;
+      max-height: 30px;
+      color: white;
+    }
+
+    .rendered{
+        background: rgba(28, 27, 27, 0.5);
+        border-radius: 7px;
+    
+    }
+    
+
+  
+    .cartImage {
+      padding: 5px;
+      margin-top: 5px;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .userName {
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+  
+    .brandName {
+      font-size: 20px;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+  
+  }

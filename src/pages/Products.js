@@ -73,6 +73,7 @@ const Products = () => {
             price={item.price}
             level={item.level}
             type={item.type}
+            item={false}
             
             />))}
 

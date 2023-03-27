@@ -13,9 +13,11 @@ const Product = (props) => {
 
     const [showModal, setShowModal] = useState(false);
     const {formData, productID, setProductID} = useAppState()
-
+    const [animation, setAnimation] = useState('fade-up');
+    
     useEffect(()=>{
       AOS.init({duration:2000});
+      props.item ? setAnimation(''): setAnimation('fade-up')
     },[])
 
     function hideModal() {
@@ -45,7 +47,7 @@ const Product = (props) => {
       }
 
       return (
-        <div className="Card" data-aos="fade-up">
+        <div className="Card" data-aos={`${animation}`}>
             <Link to={`/products/${props.name}`}>
             <div className="product-image-wrapper">
             <img src={props.image} alt='productPicture' className="product-image" />
