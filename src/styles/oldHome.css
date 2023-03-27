@@ -1,43 +1,40 @@
-.Hero{
-    background-image:  url("../images/homeBanner.jpg");
+.Hero {
+  background-image: url("../images/homeBanner.jpg");
 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 80vh;
-    position: relative;
-    
-  
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+  position: relative;
 }
 .heroOpacity {
-    background: rgba(0, 0, 0, 0.51);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color:white;
+  background: rgba(0, 0, 0, 0.51);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 .buttonContainer {
-    margin: 10px;
-    padding: 20px;
-
+  margin: 10px;
+  padding: 20px;
 }
 .productButton {
-    padding: 10px;
-    background: #d9d8d8;
-    border-radius: 7px;
-    text-decoration: none;
-    color: black;
+  padding: 10px;
+  background: #d9d8d8;
+  border-radius: 7px;
+  text-decoration: none;
+  color: black;
 }
 
 .optionsDiv {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1200px;
     margin: 30px auto;
   }
@@ -80,7 +77,7 @@
   .card {
     /*box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;*/
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: box-shadow 0.2s ease-in-out;
     margin: 10px;
   }

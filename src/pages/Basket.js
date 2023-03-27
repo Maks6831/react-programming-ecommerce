@@ -60,16 +60,21 @@ export default function Basket() {
   return (
     <div id="wrapper">
       <section id="basket-container">
-        <h1 id="basket-h1">
-          <span>[</span> Your Basket <span>]</span>
-        </h1>
+        <div className="flex-row basket-top">
+          <h1 id="basket-h1">
+            <span>[</span> Your Basket <span>]</span>
+          </h1>
+          <button className="clearCart-btn" onClick={clearLocalStorage}>
+            Clear Basket
+          </button>
+        </div>
         <section className="flex-col">
           <ul className=" flex-col item-list" id="basket">
             <ul className="flex-row item-header">
               <li className="head name-col">Items</li>
               <li className="head quantity-col">Quantity</li>
               <li className="head price-col">Price</li>
-              <li className="head currency-col"> </li>
+              <li className="head button-col"> Update basket</li>
             </ul>
             <ul className="basket">
               {localData?.map((product) => (
@@ -78,6 +83,7 @@ export default function Basket() {
                   productID={product.id}
                   name={product.name}
                   price={product.price}
+                  quantity="1"
                   removeLocalItem={() => removeLocalItem(product.id)}
                 />
               ))}
@@ -85,13 +91,10 @@ export default function Basket() {
           </ul>
         </section>
         <section className="flex-col" id="checkout">
-          <h2>
-            Total: <span>{totalPrice}</span> GBP
+          <h2 id="total-amount">
+            Total: <span>£{totalPrice}</span>
           </h2>
-          <button className="clearCart-btn" onClick={clearLocalStorage}>
-            {" "}
-            Clear Basket{" "}
-          </button>
+
           <button className="checkout-btn">Checkout</button>
           <Link to="/products" className="purple-link">
             Continue Shopping
