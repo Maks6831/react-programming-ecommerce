@@ -1,33 +1,7 @@
-#wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 3rem 1rem;
-  height: 100%;
-}
-
-#basket-container {
-  width: 60%;
-  height: 100%;
-  margin: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
-}
-
-#basket-h1 {
-  font-size: 2rem;
-  text-align: left;
-  font-weight: 100;
-  color: rgba(0, 0, 0, 0.6);
-  padding-bottom: 1rem;
-  padding-bottom: 2rem;
-}
-
-#basket-h1 span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: black;
+/*---------- Common styles ----------*/
+.basic-shadow {
+  -webkit-box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
 }
 
 .flex-col {
@@ -41,11 +15,6 @@
   align-items: center;
 }
 
-.item-list {
-  list-style-type: none;
-  height: auto;
-}
-
 li {
   list-style: none;
 }
@@ -55,7 +24,41 @@ a {
   color: unset;
 }
 
-/*Single item row*/
+/*---------- Containers ----------*/
+#wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1rem;
+  height: 100%;
+}
+
+#basket-container {
+  width: 60%;
+  height: 100%;
+  padding: 2rem;
+  background-color: white;
+}
+
+.basket-top {
+  justify-content: space-between;
+}
+
+/*---------- Heading elements ----------*/
+#basket-h1 {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 2;
+}
+
+#basket-h1 span {
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+
+/*----------Single item row (basket item)----------*/
 .item .name,
 .name-col {
   width: 40%;
@@ -65,8 +68,7 @@ a {
 .item .price,
 .item .currency,
 .quantity-col,
-.price-col,
-.currency-col {
+.price-col {
   width: 20%;
 }
 
@@ -78,9 +80,8 @@ a {
 .basket-card {
   padding: 1rem 0.5rem;
   margin: 0.5rem;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
 .basket-card,
@@ -90,33 +91,43 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+/*---------- Grey Buttons ----------*/
 .remove-item-li {
   padding: 0;
 }
+
 .remove {
   width: 100%;
   height: 100%;
-  cursor: pointer;
-  padding: 0.5rem;
-  border: none;
+  padding: 1rem 0.7rem;
 }
 
 .clearCart-btn {
-  cursor: pointer;
-  padding: 1rem 1.5rem;
-  color: black;
-  background-color: #e9e9ed;
-  /* border-radius: 3.5rem; */
-  border: none;
-  font-size: 1.2rem;
-  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1rem;
+  margin-right: 0.5rem;
 }
 
-/* ---------------------*/
+.basket-btn {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #f5f5f59b;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  font-size: 1.3rem;
+}
+
+.basket-btn:hover {
+  background-color: #e9e9ed;
+}
+
+/*---------- Checkout ----------*/
 
 #total-amount {
   padding: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  line-height: 1;
 }
 
 #checkout {
@@ -126,22 +137,24 @@ a {
 
 .checkout-btn {
   width: 40%;
-  height: 3.3rem;
-  left: 30%;
-  font-size: 1.3rem;
-  /* border-radius: 5.5rem; */
-  padding: 0.8rem;
+  font-size: 2rem;
+  padding: 1rem;
   margin: 1rem;
   border: none;
-  background-color: #4c12a1;
+  background-color: #000000;
   color: white;
   cursor: pointer;
 }
+.checkout-btn:hover {
+  background-color: #4c12a1;
+}
 
 .purple-link {
+  font-size: 1.5rem;
   color: #4c12a1;
 }
 
-.basket-top {
-  justify-content: space-between;
+.purple-link:hover {
+  font-size: 1.7rem;
+  color: rgba(0, 0, 0, 0.6);
 }

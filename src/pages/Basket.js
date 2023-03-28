@@ -59,12 +59,15 @@ export default function Basket() {
 
   return (
     <div id="wrapper">
-      <section id="basket-container">
+      <section id="basket-container" className="basic-shadow .flex-col">
         <div className="flex-row basket-top">
           <h1 id="basket-h1">
             <span>[</span> Your Basket <span>]</span>
           </h1>
-          <button className="clearCart-btn" onClick={clearLocalStorage}>
+          <button
+            className="clearCart-btn basket-btn"
+            onClick={clearLocalStorage}
+          >
             Clear Basket
           </button>
         </div>

@@ -3,8 +3,14 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  height: 10vh;
+  height: 7vh;
 
   color: white;
   font-size: 1.3rem;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  margin-top: 3rem;
 }
