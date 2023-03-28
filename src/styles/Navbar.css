@@ -82,7 +82,7 @@ nav h1 {
 
 .cartImage {
     padding: 10px;
-    max-width: 100%;
+    max-width: 60px;
     height: auto;
     padding-bottom: 10px;
 }
@@ -145,7 +145,7 @@ nav h1 {
     .cartImage {
       padding: 5px;
       margin-top: 5px;
-      max-width: 100%;
+      max-width: 70px;
       height: auto;
     }
   

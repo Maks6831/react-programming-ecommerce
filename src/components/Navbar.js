@@ -78,7 +78,7 @@ const Navbar = () => {
           {" "}
           {!currentUser ? (
             <button
-            style={{all: 'unset', color: 'white', marginRight: '10px'}}
+            style={{all: 'unset', color: 'white', marginRight: '10px', cursor: 'pointer'}}
               className="buttons not-rendered"
               onClick={() => signupWithGoogle()}
             >
@@ -86,7 +86,7 @@ const Navbar = () => {
             </button>
           ) : (
             <button
-            style={{all: 'unset', color: 'white', marginRight: '10px'}}
+            style={{all: 'unset', color: 'white', marginRight: '10px', cursor: 'pointer'}}
              className="buttons not-rendered" onClick={() => logout()}>
               Sign Out
             </button>
