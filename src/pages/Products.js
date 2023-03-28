@@ -28,10 +28,10 @@ const Products = () => {
                 setFilterName('Monitors');
             break
             case 'chair':
-                setFilterName('chairs');
+                setFilterName('Chairs');
             break;
             case 'Ninja':
-                setFilterName('Your looking at the ninja kit');
+                setFilterName('Your looking at the Ninja kit');
             break
             case 'Newbie':
                 setFilterName('Your looking at the Newbie kit');
@@ -53,7 +53,7 @@ const Products = () => {
     return (
         <div style={{minHeight: '80vh'}}>
             <div className="title-section">
-            <h1>Checkout Our Products</h1>
+            <h1>Our Products</h1>
             <div className="filter-section">
                 <div onClick={()=> setOpen(!open)}>Filter
                 {open && <DropDownMenu handleButton={handleButton}/>} 

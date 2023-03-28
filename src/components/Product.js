@@ -3,7 +3,7 @@ import '../styles/Product.css'
 import { Link } from "react-router-dom";
 import itemInfo from "../itemInfo.json";
 import { useAppState } from '../providers/app-state'
-import '../styles/Products.css';
+import '../styles/Modal.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -61,14 +61,14 @@ const Product = (props) => {
             </Link>
             
             <p className="p-tag">price: £{props.price}</p>
-            <button className="product-button" onClick={addToCart}> Add to cart</button>
+            <button className="product-button" onClick={addToCart}> Add to basket</button>
             {showModal && productID === props?.id ? (
                 <div className="modal">
                 <div className="modal-content">
-                    <h5 className="modal-title"> {props.name} has been added to the cart!</h5>
-                    <p> Continue shopping or go to checkout!</p>
-                <button className="button-navigation" onClick={hideModal}>Continue shopping</button>
-                <button className="button-navigation" onClick={goToBasket}>Go to basket</button>
+                    <h5 className="modal-title"> {props.name} </h5>
+                    <p> ...has been added to the basket!</p>
+                <button className="modal-navigation modal-navigation button" onClick={hideModal}>Continue shopping</button>
+                <button className="modal-navigation" onClick={goToBasket}>Go to basket</button>
                 </div>
                 </div>
             ):<></>} 
