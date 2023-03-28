@@ -8,12 +8,13 @@
 }
 
 .title-sections:hover {
-  transition: box-shadow 1s ease-in-out;
+  transition: box-shadow 1s ease-in;
   box-shadow: rgb(38, 57, 77) 10px 20px 30px -5px;
 }
 
 .title-sections h1 {
   margin: 20px;
+  font-size: 3rem;
 }
 
 
