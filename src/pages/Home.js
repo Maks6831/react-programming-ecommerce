@@ -8,7 +8,19 @@ const Home = () => {
   return (
     <div>
       <Achero />
-      <section id="about-section">
+      
+      <div className="buttonContainer">
+        <Link to="/products" className="productButton">
+          Discover our Products
+        </Link>
+      </div>
+      <section className="about">
+      <div className="about-section">
+        <div className="about-title">
+        <h2>What we are about</h2>
+        </div>
+       
+        
         <p className="about-description">
           At ByteBazaar, we offer a wide range of high-quality equipment and
           accessories from top brands for your coding needs. Our e-commerce
@@ -16,12 +28,8 @@ const Home = () => {
           customer support team is always available to assist you. Join our
           community today and elevate your coding setup!
         </p>
-      </section>
-      <div className="buttonContainer">
-        <Link to="/products" className="productButton">
-          Discover our Products
-        </Link>
       </div>
+      </section>
 
       <div className="kitSection">
         <h1>Checkout our kits</h1>
