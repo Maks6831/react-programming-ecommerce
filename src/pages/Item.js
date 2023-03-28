@@ -33,6 +33,7 @@ const Item = () => {
         <div style={{paddingTop: '10px'}}>
             {<Productrenderer
             
+            id={currentItem[0]?.id}
             name={currentItem[0]?.name}
             key={currentItem[0]?.id}
             description={currentItem[0]?.description}

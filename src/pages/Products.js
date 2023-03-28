@@ -27,7 +27,7 @@ const Products = (props) => {
                 setFilterName('Monitors');
             break
             case 'chair':
-                setFilterName('chairs');
+                setFilterName('Chairs');
             break;
             case 'Ninja':
                 setFilterName("You're looking at the ninja kit");

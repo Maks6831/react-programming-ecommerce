@@ -5,6 +5,8 @@ import { useAuth, AuthProvider } from "./contexts/AuthContext";
 import { auth, provider } from "./pages/Firebase";
 import { AppStateProvider, useAppState } from "./providers/app-state";
 
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
