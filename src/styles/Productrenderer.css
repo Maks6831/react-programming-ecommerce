@@ -117,7 +117,7 @@
   .fade-in-2 {
     opacity: 0;
     animation-name: fadeIn-2;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
@@ -136,7 +136,7 @@
   .fade-in-3 {
     opacity: 0;
     animation-name: fadeIn-3;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }

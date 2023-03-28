@@ -117,14 +117,15 @@ nav h1 {
       width: 100%;
       margin: 5px;
       text-align: center;
-      background-color: rgb(99, 98, 98);
+      background-color: black;
       font-size: 14px;
       max-height: 30px;
       color: white;
     }
 
     .rendered{
-        background: rgba(28, 27, 27, 0.5);
+        background-color: white;
+        color: black;
         border-radius: 7px;
     
     }
