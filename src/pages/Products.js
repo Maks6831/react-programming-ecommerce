@@ -28,10 +28,10 @@ const Products = () => {
                 setFilterName('Monitors');
             break
             case 'chair':
-                setFilterName('chairs');
+                setFilterName('Chairs');
             break;
             case 'Ninja':
-                setFilterName('Your looking at the ninja kit');
+                setFilterName('Your looking at the Ninja kit');
             break
             case 'Newbie':
                 setFilterName('Your looking at the Newbie kit');
