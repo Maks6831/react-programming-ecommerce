@@ -66,7 +66,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="form-container">
+    <section className="form-container basic-shadow">
       <h2>
         <span>[</span> {h2Text} <span>]</span>
       </h2>
