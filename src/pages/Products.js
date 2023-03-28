@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
 import itemInfo from "../itemInfo.json";
 import DropDownMenu from "../components/Dropdownmenu";
-import '../styles/Products.css'
+import '../styles/Products.css';
+import { useLocation } from "react-router-dom";
 
-const Products = () => {
+const Products = (props) => {
+    
     const [productArray, setProductArray] = useState(itemInfo);
     const [filterDisplay, setFilterDisplay] =useState('');
     const [filterName, setFilterName] = useState('')
@@ -46,6 +48,14 @@ const Products = () => {
         e.target.value === "all" ? setProductArray(itemInfo) && setFilterName('') :  setProductArray(itemInfo.filter((item)=>(item.level === e.target.value || e.target.value === item.type )))
        
     }
+    const location = useLocation();
+
+    useEffect(()=>{
+        
+        location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)))
+    },[props])
+    
+
     
     
 

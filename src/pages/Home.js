@@ -26,10 +26,10 @@ const Home = () => {
       <div className="kitSection">
         <h1>Checkout our kits</h1>
         <div className="optionsDiv">
-          <div className="card">
+          <Link to='/products' state={{level : 'Newbie'}} st className="card">
             <div className=" kitCard newbie"></div>
             <div className="kitTitle">Newbie Kit</div>
-          </div>
+          </Link>
           <div className="card">
             <div className=" kitCard ninja"></div>
             <div className="kitTitle">Ninja Kit</div>
