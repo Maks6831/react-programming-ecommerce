@@ -40,7 +40,7 @@ const Navbar = () => {
         
       </Link>
       <div className="icon">
-      <i class="fa-solid fa-bars fa-lg" style={{color: "#ffffff"}} onClick={toggleMenu}></i>
+      <i className="fa-solid fa-bars fa-lg" style={{color: "#ffffff"}} onClick={toggleMenu}></i>
       </div>
       </div>
       
