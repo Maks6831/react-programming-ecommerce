@@ -8,7 +8,7 @@ import Product from "../components/Product";
 import "../styles/Item.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import UseScrollToTop from "../components/ScrollToTop";
+
 
 
 const Item = () => {
@@ -19,6 +19,7 @@ const Item = () => {
     useEffect(()=>{
         setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
         AOS.init({duration:2000});  
+        window.scrollTo(0, 0);
     },[item])
     useEffect(()=>{
         
@@ -29,7 +30,7 @@ const Item = () => {
     
     
     return (
-        <div ref={UseScrollToTop()} style={{paddingTop: '10px'}}>
+        <div style={{paddingTop: '10px'}}>
             {<Productrenderer
             
             id={currentItem[0]?.id}
@@ -77,7 +78,7 @@ const Item = () => {
             </div>
             <div className="comment-section">
                 <h2>Reviews</h2>
-                <p>There are currently no review for the {currentItem[0]?.name}</p>
+                <p>There are currently no reviews for the {currentItem[0]?.name}</p>
             </div>
             
 

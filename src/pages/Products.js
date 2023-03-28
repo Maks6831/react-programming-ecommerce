@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import Product from "../components/Product";
 import itemInfo from "../itemInfo.json";
 import DropDownMenu from "../components/Dropdownmenu";
-import '../styles/Products.css'
+import '../styles/Products.css';
+import { useLocation } from "react-router-dom";
+import UseScrollToTop from "../components/ScrollToTop";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Products = () => {
-    const [productArray, setProductArray] = useState(itemInfo);
-    const [filterDisplay, setFilterDisplay] =useState('');
-    const [filterName, setFilterName] = useState('')
-    const [open, setOpen] = useState(false);
-    const handleButton = (e) => {
-        setOpen(!open);
-        switch(e.target.value){
+const Products = (props) => {
+    const renderSwitch = (param) => {
+        switch(param){
             case 'all':
                 setFilterName('All Products');
             break;
@@ -31,28 +30,49 @@ const Products = () => {
                 setFilterName('Chairs');
             break;
             case 'Ninja':
-                setFilterName('Your looking at the Ninja kit');
+                setFilterName("You're looking at the ninja kit");
             break
             case 'Newbie':
-                setFilterName('Your looking at the Newbie kit');
+                setFilterName("You're looking at the Newbie kit");
             break
             case 'Master':
-                setFilterName('Your looking at the Merge Master kit');
+                setFilterName("You're looking at the Merge Master kit");
             break
             default: 
                 setFilterName('')
 
         }
+
+
+    }
+    
+    const [productArray, setProductArray] = useState(itemInfo);
+    const [filterDisplay, setFilterDisplay] =useState('');
+    const [filterName, setFilterName] = useState('')
+    const [open, setOpen] = useState(false);
+    const handleButton = (e) => {
+        setOpen(!open);
+        renderSwitch(e.target.value)
         e.target.value === "all" ? setProductArray(itemInfo) && setFilterName('') :  setProductArray(itemInfo.filter((item)=>(item.level === e.target.value || e.target.value === item.type )))
        
     }
-    
+    const location = useLocation();
+
+    useEffect(()=>{
+        AOS.init({duration:2000}); 
+        window.scrollTo(0, 0)
+         location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)));
+         location.state && renderSwitch(location.state.level);
+        
+    },[])
     
 
+    
+    
 
     return (
-        <div style={{minHeight: '80vh'}}>
-            <div className="title-section">
+        <div ref={UseScrollToTop()} style={{minHeight: '80vh'}}>
+            <div data-aos="fade-down" className="title-sections">
             <h1>Our Products</h1>
             <div className="filter-section">
                 <div onClick={()=> setOpen(!open)}>Filter

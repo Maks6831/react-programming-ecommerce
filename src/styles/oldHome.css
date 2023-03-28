@@ -23,57 +23,115 @@
   margin: 10px;
   padding: 20px;
 }
-.productButton {
-  padding: 10px;
-  background: #d9d8d8;
-  border-radius: 7px;
-  text-decoration: none;
-  color: black;
+
+/* styling inspired from https://codepen.io/noob460/pen/qBVNVYO  */
+
+.productButton{
+   font-size: 1.2rem;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 400ms;
 }
+.productButton::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0; left: 0;
+   border-left: 3px solid #007bff;
+   border-top: 3px solid #007bff;
+   transition: all 400ms;
+}
+.productButton::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 0; right: 0;
+   border-right: 3px solid #007bff;
+   border-bottom: 3px solid #007bff;
+   transition: all 400ms;
+}
+.productButton:hover::before,.productButton:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
 
 .optionsDiv {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  margin: 30px;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 30px auto;
+  }
+  
+  .kitSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+  }
 
-.kitSection {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.kitCard {
-  width: 300px;
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border-radius: 5px;
-}
+  .kitSection h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
-.newbie {
-  background-image: url("../images/newbiekit.jpg");
-}
+  }
 
-.ninja {
-  background-image: url("../images/ninjakit.jpg");
-}
 
-.master {
-  background-image: url("../images/masterkit.jpg");
-}
-
-.card {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.kitTitle {
-  text-align: center;
-  padding: 5px;
-}
+  
+  .kitCard {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .kitCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .newbie {
+    background-image: url('../images/newbiekit.jpg');
+  }
+  
+  .ninja {
+    background-image: url('../images/ninjakit.jpg');
+  }
+  
+  .master {
+    background-image: url('../images/masterkit.jpg');
+  }
+  
+  .card {
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;*/
+    padding: 10px;
+    border-radius: 10px;
+    transition: box-shadow 0.2s ease-in-out;
+    margin: 10px;
+  }
+  
+  .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 60px -12px;
+  }
+  
+  .kitTitle {
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .kitCard:hover .kitTitle {
+    color: #ff8c00;
+  }
