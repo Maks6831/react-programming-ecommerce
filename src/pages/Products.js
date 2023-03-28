@@ -6,14 +6,8 @@ import '../styles/Products.css';
 import { useLocation } from "react-router-dom";
 
 const Products = (props) => {
-    
-    const [productArray, setProductArray] = useState(itemInfo);
-    const [filterDisplay, setFilterDisplay] =useState('');
-    const [filterName, setFilterName] = useState('')
-    const [open, setOpen] = useState(false);
-    const handleButton = (e) => {
-        setOpen(!open);
-        switch(e.target.value){
+    const renderSwitch = (param) => {
+        switch(param){
             case 'all':
                 setFilterName('All Products');
             break;
@@ -33,18 +27,29 @@ const Products = (props) => {
                 setFilterName('chairs');
             break;
             case 'Ninja':
-                setFilterName('Your looking at the ninja kit');
+                setFilterName("You're looking at the ninja kit");
             break
             case 'Newbie':
-                setFilterName('Your looking at the Newbie kit');
+                setFilterName("You're looking at the Newbie kit");
             break
             case 'Master':
-                setFilterName('Your looking at the Merge Master kit');
+                setFilterName("You're looking at the Merge Master kit");
             break
             default: 
                 setFilterName('')
 
         }
+
+
+    }
+    
+    const [productArray, setProductArray] = useState(itemInfo);
+    const [filterDisplay, setFilterDisplay] =useState('');
+    const [filterName, setFilterName] = useState('')
+    const [open, setOpen] = useState(false);
+    const handleButton = (e) => {
+        setOpen(!open);
+        renderSwitch(e.target.value)
         e.target.value === "all" ? setProductArray(itemInfo) && setFilterName('') :  setProductArray(itemInfo.filter((item)=>(item.level === e.target.value || e.target.value === item.type )))
        
     }
@@ -52,13 +57,14 @@ const Products = (props) => {
 
     useEffect(()=>{
         
-        location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)))
-    },[props])
+         location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)));
+         location.state && renderSwitch(location.state.level);
+        
+    },[])
     
 
     
     
-
 
     return (
         <div style={{minHeight: '80vh'}}>
