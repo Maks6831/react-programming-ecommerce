@@ -78,7 +78,7 @@ const Item = () => {
             </div>
             <div className="comment-section">
                 <h2>Reviews</h2>
-                <p>There are currently no review for the {currentItem[0]?.name}</p>
+                <p>There are currently no reviews for the {currentItem[0]?.name}</p>
             </div>
             
 
