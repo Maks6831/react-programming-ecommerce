@@ -1,19 +1,18 @@
-.title-section {
-  box-shadow: rgb(38, 57, 77) 10px 20px 30px -10px;
+.title-sections {
+  
   margin: 20px;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  transition: box-shadow 0.3s ease-in-out;
   
 }
 
-.title-section:hover {
-  
+.title-sections:hover {
+  transition: box-shadow 1s ease-in-out;
   box-shadow: rgb(38, 57, 77) 10px 20px 30px -5px;
 }
 
-.title-section h1 {
+.title-sections h1 {
   margin: 20px;
 }
 

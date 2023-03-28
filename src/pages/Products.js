@@ -60,6 +60,7 @@ const Products = (props) => {
 
     useEffect(()=>{
         AOS.init({duration:2000}); 
+        window.scrollTo(0, 0)
          location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)));
          location.state && renderSwitch(location.state.level);
         
@@ -71,7 +72,7 @@ const Products = (props) => {
 
     return (
         <div ref={UseScrollToTop()} style={{minHeight: '80vh'}}>
-            <div data-aos="fade-down" className="title-section">
+            <div data-aos="fade-down" className="title-sections">
             <h1>Checkout Our Products</h1>
             <div className="filter-section">
                 <div onClick={()=> setOpen(!open)}>Filter

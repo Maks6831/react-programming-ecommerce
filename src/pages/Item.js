@@ -8,7 +8,7 @@ import Product from "../components/Product";
 import "../styles/Item.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import UseScrollToTop from "../components/ScrollToTop";
+
 
 
 const Item = () => {
@@ -19,6 +19,7 @@ const Item = () => {
     useEffect(()=>{
         setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
         AOS.init({duration:2000});  
+        window.scrollTo(0, 0);
     },[item])
     useEffect(()=>{
         
@@ -29,7 +30,7 @@ const Item = () => {
     
     
     return (
-        <div ref={UseScrollToTop()} style={{paddingTop: '10px'}}>
+        <div style={{paddingTop: '10px'}}>
             {<Productrenderer
             
             name={currentItem[0]?.name}

@@ -23,13 +23,41 @@
   margin: 10px;
   padding: 20px;
 }
-.productButton {
-  padding: 10px;
-  background: #d9d8d8;
-  border-radius: 7px;
-  text-decoration: none;
-  color: black;
+
+/* styling inspired from https://codepen.io/noob460/pen/qBVNVYO  */
+
+.productButton{
+   font-size: 1.2rem;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 400ms;
 }
+.productButton::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0; left: 0;
+   border-left: 3px solid #007bff;
+   border-top: 3px solid #007bff;
+   transition: all 400ms;
+}
+.productButton::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    bottom: 0; right: 0;
+   border-right: 3px solid #007bff;
+   border-bottom: 3px solid #007bff;
+   transition: all 400ms;
+}
+.productButton:hover::before,.productButton:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
 
 .optionsDiv {
     display: flex;
@@ -46,6 +74,15 @@
     justify-content: center;
     padding: 50px 0;
   }
+
+  .kitSection h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+  }
+
+
   
   .kitCard {
     width: 300px;

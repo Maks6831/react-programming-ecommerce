@@ -39,17 +39,17 @@ const Home = () => {
       </section>
 
       <div className="kitSection">
-        <h1>Checkout our kits</h1>
+        <h3>Checkout our kits</h3>
         <div className="optionsDiv">
-          <Link to='/products' state={{level : 'Newbie'}} st className="card">
+          <Link to='/products' state={{level : 'Newbie'}} st className="card" data-aos="flip-left">
             <div className=" kitCard newbie"></div>
             <div className="kitTitle">Newbie Kit</div>
           </Link>
-          <Link to='/products' state={{level : 'Ninja'}} st className="card">
+          <Link to='/products' state={{level : 'Ninja'}} st className="card" data-aos="flip-left">
             <div className=" kitCard ninja"></div>
             <div className="kitTitle">Ninja Kit</div>
           </Link>
-          <Link to='/products' state={{level : 'Master'}} st className="card">
+          <Link to='/products' state={{level : 'Master'}} st className="card" data-aos="flip-left">
             <div className=" kitCard master"></div>
             <div className="kitTitle">Master Kit</div>
           </Link>
