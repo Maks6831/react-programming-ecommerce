@@ -120,5 +120,6 @@ h5 {
 .title-section {
     text-align: center;
     margin: 30px;
+    z-index: 1;
     
 }

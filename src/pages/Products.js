@@ -4,6 +4,9 @@ import itemInfo from "../itemInfo.json";
 import DropDownMenu from "../components/Dropdownmenu";
 import '../styles/Products.css';
 import { useLocation } from "react-router-dom";
+import UseScrollToTop from "../components/ScrollToTop";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Products = (props) => {
     const renderSwitch = (param) => {
@@ -56,7 +59,7 @@ const Products = (props) => {
     const location = useLocation();
 
     useEffect(()=>{
-        
+        AOS.init({duration:2000}); 
          location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)));
          location.state && renderSwitch(location.state.level);
         
@@ -67,8 +70,8 @@ const Products = (props) => {
     
 
     return (
-        <div style={{minHeight: '80vh'}}>
-            <div className="title-section">
+        <div ref={UseScrollToTop()} style={{minHeight: '80vh'}}>
+            <div data-aos="fade-down" className="title-section">
             <h1>Checkout Our Products</h1>
             <div className="filter-section">
                 <div onClick={()=> setOpen(!open)}>Filter

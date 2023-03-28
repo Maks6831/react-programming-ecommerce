@@ -30,14 +30,14 @@ const Home = () => {
             <div className=" kitCard newbie"></div>
             <div className="kitTitle">Newbie Kit</div>
           </Link>
-          <div className="card">
+          <Link to='/products' state={{level : 'Ninja'}} st className="card">
             <div className=" kitCard ninja"></div>
             <div className="kitTitle">Ninja Kit</div>
-          </div>
-          <div className="card">
+          </Link>
+          <Link to='/products' state={{level : 'Master'}} st className="card">
             <div className=" kitCard master"></div>
             <div className="kitTitle">Master Kit</div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
