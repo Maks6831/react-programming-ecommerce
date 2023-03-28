@@ -75,3 +75,26 @@
   text-align: justify;
   border-radius: 0.5rem;
 }
+
+@media only screen and (max-width: 730px) {
+  .about-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .about-description {
+    width: 80%;
+  }
+
+  .about-title h2 {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+}
+
+
+
+
