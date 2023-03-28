@@ -53,7 +53,7 @@ const Products = () => {
     return (
         <div style={{minHeight: '80vh'}}>
             <div className="title-section">
-            <h1>Checkout Our Products</h1>
+            <h1>Our Products</h1>
             <div className="filter-section">
                 <div onClick={()=> setOpen(!open)}>Filter
                 {open && <DropDownMenu handleButton={handleButton}/>} 

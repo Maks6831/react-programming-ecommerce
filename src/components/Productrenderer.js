@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useAppState } from '../providers/app-state'
 import '../styles/Productrenderer.css'
 import itemInfo from "../itemInfo.json"
-import '../styles/Products.css';
+import '../styles/Modal.css';
 
 
 
@@ -57,11 +57,11 @@ function goToProducts() {
             {showModal && productID === props?.id ? (
                 <div className="modal">
                 <div className="modal-content">
-                    <h5 className="modal-title"> {props.name} has been added to the basket!</h5>
-                    <p> Stay on page, go to products or checkout!</p>
-                <button className="button-navigation" onClick={hideModal}>Stay on page</button>
-                <button className="button-navigation" onClick={goToProducts}>Go to products page</button>
-                <button className="button-navigation" onClick={goToBasket}>Go to basket</button>
+                    <h5 className="modal-title"> {props.name} </h5>
+                    <p> ...has been added to the basket!</p>
+                <button className="modal-navigation" onClick={hideModal}>Stay on page</button>
+                <button className="modal-navigation" onClick={goToProducts}>Go to products page</button>
+                <button className="modal-navigation" onClick={goToBasket}>Go to basket</button>
                 </div>
                 </div>
             ):<></>} 
