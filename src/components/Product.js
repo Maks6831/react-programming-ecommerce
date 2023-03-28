@@ -3,7 +3,6 @@ import '../styles/Product.css'
 import { Link } from "react-router-dom";
 import itemInfo from "../itemInfo.json";
 import { useAppState } from '../providers/app-state'
-import '../styles/Products.css';
 import '../styles/Modal.css';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
