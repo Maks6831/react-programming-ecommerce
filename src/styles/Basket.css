@@ -37,6 +37,7 @@ a {
   height: 100%;
   padding: 2rem;
   background-color: white;
+  margin-bottom: 5rem;
 }
 
 .basket-top {
@@ -74,7 +75,9 @@ a {
 
 .item-header {
   padding: 2rem 0.5rem;
+  margin: 2rem 0rem;
   font-size: 1.4rem;
+  background-color: #00000003;
 }
 
 .basket-card {
@@ -92,6 +95,11 @@ a {
 }
 
 /*---------- Grey Buttons ----------*/
+
+#remove-cross {
+  display: none;
+}
+
 .remove-item-li {
   padding: 0;
 }
@@ -99,7 +107,7 @@ a {
 .remove {
   width: 100%;
   height: 100%;
-  padding: 1rem 0.7rem;
+  padding: 0.9rem 0.7rem;
 }
 
 .clearCart-btn {
@@ -128,6 +136,8 @@ a {
   font-size: 2rem;
   letter-spacing: 0.3rem;
   line-height: 1;
+  text-align: center;
+  width: 100%;
 }
 
 #checkout {
@@ -152,9 +162,54 @@ a {
 .purple-link {
   font-size: 1.5rem;
   color: #4c12a1;
+  padding-top: 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .purple-link:hover {
   font-size: 1.7rem;
   color: rgba(0, 0, 0, 0.6);
+}
+
+/*---------- MEDIA QUERIES ----------*/
+
+@media (min-width: 1794px) {
+  .basket-btn {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (min-width: 1462px) and (max-width: 1793px) {
+  .basket-btn {
+    font-size: 1rem;
+    padding: 0.8rem 0.3rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  #remove-text,
+  .button-col {
+    display: none;
+  }
+  #remove-cross {
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  .quantity-col,
+  .price-col {
+    width: 25%;
+  }
+  .checkout-btn {
+    width: 100%;
+    margin: auto;
+  }
+  #total-amount {
+    font-size: 1.5rem;
+  }
+  .purple-link {
+    font-size: 1.2rem;
+  }
 }

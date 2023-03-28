@@ -77,7 +77,7 @@ export default function Basket() {
               <li className="head name-col">Items</li>
               <li className="head quantity-col">Quantity</li>
               <li className="head price-col">Price</li>
-              <li className="head button-col"> Update basket</li>
+              <li className="head button-col">Update basket</li>
             </ul>
             <ul className="basket">
               {localData?.map((product) => (
