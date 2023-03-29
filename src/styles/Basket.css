@@ -21,7 +21,7 @@ a {
 /*---------- Main Containers ----------*/
 #wrapper {
   padding: 1rem 1rem;
-  height: 88vh;
+  height: 100%;
   width: 60%;
   margin: auto;
 }
@@ -55,6 +55,7 @@ a {
 .basket-row {
   flex-wrap: wrap;
   border-top: 1px solid rgba(237, 236, 236, 0.598);
+  position: relative; /*so that the cross to delete item can be set as absolute*/
 }
 
 .basket-card {
@@ -76,11 +77,11 @@ a {
 }
 
 .basket-card-left {
-  min-width: 60%;
+  width: 60%;
 }
 
 .basket-card-right {
-  min-width: 40%;
+  width: 40%;
   justify-content: space-between;
 }
 
@@ -152,6 +153,71 @@ a {
   background-color: #e9e9ed;
 }
 
-/* #remove-cross {
+#remove-cross {
   display: none;
-} */
+}
+
+/* ----------Media Queries---------- */
+
+@media (max-width: 900px) {
+  #wrapper {
+    width: 100%;
+  }
+  .basket-card-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .name,
+  #total-amount {
+    font-size: 1.8rem;
+  }
+
+  .basket-card-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .basket-card {
+    font-size: 1.1rem;
+  }
+  .basket-img {
+    max-width: 8em;
+  }
+
+  .quantity,
+  .price {
+    padding-right: 1rem;
+  }
+
+  #remove-text {
+    display: none;
+  }
+
+  #remove-cross {
+    display: flex;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .basket-card {
+    font-size: 1rem;
+  }
+
+  .basket-img {
+    max-width: 3rem;
+  }
+}
