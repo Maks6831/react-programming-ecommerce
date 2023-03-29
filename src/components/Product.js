@@ -25,20 +25,26 @@ const Product = (props) => {
     }
   
     function addToCart() {
-        console.log(props.name)
+       //console.log(props.name)
         // Set the global state to the ID of the product
         setProductID(props.id)
         // Get the ID of the current product from its props
         const findProductID = props.id
         // Gets the saved products from local storage, or creates an empty array if none are found
         const savedProductsJSON = localStorage.getItem('savedProducts')
-        const savedProducts = savedProductsJSON ? JSON.parse(savedProductsJSON) : []
+        const savedProducts = savedProductsJSON ? JSON.parse(savedProductsJSON) : [];
         // Find the ID and add it to the savedProducts array
         const productToAdd = itemInfo.find(product => product.id === findProductID)
-        savedProducts.push(productToAdd)
-        // console.log('productID: ' + findProductID)
+        if(savedProducts.some(prod => prod.id === productToAdd.id)){
+          const index = savedProducts.findIndex(obj => obj.id === productToAdd.id)
+          savedProducts[index].quantity = +savedProducts[index].quantity + 1;
+          console.log(savedProducts[index].quantity)
+        } else {
+          savedProducts.push(productToAdd);
+        } 
         localStorage.setItem('savedProducts', JSON.stringify(savedProducts))
         // console.log('Storage Array: ' + JSON.stringify(savedProducts))
+
         setShowModal(true)
     }
 
