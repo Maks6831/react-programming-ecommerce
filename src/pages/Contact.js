@@ -12,9 +12,9 @@ const Contact = () => {
 
   return (
     <>
-      <section className="Hero" data-aos="fade-right">
+      <section className="Hero">
         <div className="heroOpacity">
-          <h1 id="contact-page-h1">
+          <h1 id="contact-page-h1" data-aos="fade-right">
             We deliver quality tech
             <br />[ <span>byte by byte</span> ]
           </h1>
