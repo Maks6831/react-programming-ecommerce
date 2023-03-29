@@ -42,9 +42,6 @@ const Product = (props) => {
         setShowModal(true)
     }
 
-    function goToBasket() {
-        window.location.replace('../basket')
-      }
 
       return (
         <div className="Card" data-aos={`${animation}`}>
@@ -68,7 +65,7 @@ const Product = (props) => {
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
                 <button className="modal-navigation modal-navigation button" onClick={hideModal}>Continue shopping</button>
-                <button className="modal-navigation" onClick={goToBasket}>Go to basket</button>
+                <Link className="modal-navigation" to="/basket">Go to basket</Link>
                 </div>
                 </div>
             ):<></>} 

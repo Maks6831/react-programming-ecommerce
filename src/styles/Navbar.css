@@ -1,7 +1,10 @@
-.not-rendered {
-  background: #ffffff;
+.not-rendered{
+  padding: 10px;
+  background-color: black;
   border-radius: 7px;
   z-index: 10;
+  color: white;
+
 }
 
 .hidden {
@@ -19,13 +22,26 @@
   display: none;
 }
 
-.not-rendered:hover {
-  background: rgb(255, 255, 255, 0.5);
+
+.not-rendered:after{
+  display: block;
+  content: '';
+  border-bottom: solid 3px white;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  
 }
 
-.rendered {
-  background: rgb(255, 255, 255, 0.5);
-  border-radius: 7px;
+.not-rendered:hover:after{
+  transform: scaleX(1)
+
+}
+
+.rendered{
+    background-color: black;
+    color: white;
+    border-bottom: solid 3px white;
+
 }
 
 .userName {
@@ -34,11 +50,13 @@
   font-size: 1.2rem;
 }
 
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  background-color: black;
-  height: 70px;
+/**/
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 70px;
 }
 
 .buttonContainer {
@@ -54,17 +72,18 @@ nav h1 {
 }
 
 .buttons {
-  padding: 10px;
-  margin: 10px;
-  color: black;
-  text-decoration: none;
-  max-height: 40px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    max-height: 40px;
+
 }
 
 .cartImage {
-  padding: 10px;
-  max-width: 5rem;
-  height: auto;
+    padding: 10px;
+    max-width: 60px;
+    height: auto;
+    padding-bottom: 10px;
 }
 
 .brandName {
@@ -111,26 +130,61 @@ nav h1 {
     color: white;
   }
 
-  .rendered {
-    background: rgba(28, 27, 27, 0.5);
-    border-radius: 7px;
-  }
+    .icon {
+        display: inline;
+        margin-right: 10px;
+        height:1.2rem;
+    }
 
-  .cartImage {
-    padding: 5px;
-    margin-top: 5px;
-    max-width: 100%;
-    height: auto;
-  }
+    .navBar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      z-index: 1000;
 
-  .userName {
-    font-size: 1rem;
-    margin-top: 20px;
-  }
+      
+    }
+  
+    .buttonContainer {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    .buttons {
+      padding: 5px;
+      width: 100%;
+      margin: 5px;
+      text-align: center;
+      background-color: black;
+      font-size: 14px;
+      max-height: 30px;
+      color: white;
+    }
 
-  .brandName {
-    font-size: 20px;
-    padding-left: 0;
-    margin-bottom: 10px;
+    
+
+  
+    .cartImage {
+      padding: 5px;
+      margin-top: 5px;
+      max-width: 70px;
+      height: auto;
+    }
+  
+    .userName {
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+  
+    .brandName {
+      font-size: 20px;
+      padding-left: 0;
+      margin-bottom: 10px;
+    }
+
+  
   }
-}

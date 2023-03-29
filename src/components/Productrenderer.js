@@ -3,6 +3,7 @@ import { useAppState } from '../providers/app-state'
 import '../styles/Productrenderer.css'
 import itemInfo from "../itemInfo.json"
 import '../styles/Modal.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -33,14 +34,6 @@ function hideModal() {
       setShowModal(true)
   }
 
-  function goToBasket() {
-    window.location.replace('../basket')
-  }
-
-function goToProducts() {
-    window.location.replace('../products')
-}
-
     return (
         <div>
             <div className="item-section fade-in" >
@@ -60,8 +53,8 @@ function goToProducts() {
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
                 <button className="modal-navigation" onClick={hideModal}>Stay on page</button>
-                <button className="modal-navigation" onClick={goToProducts}>Go to products page</button>
-                <button className="modal-navigation" onClick={goToBasket}>Go to basket</button>
+                <Link className="modal-navigation" to="/products" end>Go to products page</Link>
+                <Link className="modal-navigation" to="/basket" end>Go to basket</Link>
                 </div>
                 </div>
             ):<></>} 

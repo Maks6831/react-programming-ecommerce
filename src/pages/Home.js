@@ -24,7 +24,7 @@ const Home = () => {
       <section className="about">
       <div className="about-section">
         <div className="about-title" data-aos="fade-right">
-        <h2>What we are about</h2>
+        <h2>Our Ethos</h2>
         </div>
        
         

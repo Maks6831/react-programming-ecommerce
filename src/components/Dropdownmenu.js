@@ -5,7 +5,7 @@ const DropDownMenu = (props) => {
     return (
         <div className="dropdown-div">
             <div className="categories">
-                <div className="drop-titles db-1">item categories</div>
+                <div className="drop-titles db-1">Item Categories</div>
                     <button value="keyboard" className="drop-button db-2" onClick={props.handleButton}>Keyboards</button>
                     <button value="mouse" className="drop-button db-3" onClick={props.handleButton}>Mice</button>
                     <button value="monitor" className="drop-button db-4" onClick={props.handleButton}>Monitors</button>
