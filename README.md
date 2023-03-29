@@ -6,8 +6,11 @@
 ![](https://img.shields.io/badge/CSS3-black?style=flat&logo=css3&logoWidth=23)
 ![](https://img.shields.io/badge/Javascript-black?style=flat&logo=javascript&logoWidth=23)
 ![](https://img.shields.io/badge/Node.js-black?style=flat&logo=nodedotjs&logoWidth=23)
+![](https://img.shields.io/badge/AOS-black?style=flat&logo=npm&logoWidth=23)
 ![](https://img.shields.io/badge/React-black?style=flat&logo=createreactapp&logoWidth=23)
 ![](https://img.shields.io/badge/Firebase-black?style=flat&logo=firebase&logoWidth=23)
+![](https://img.shields.io/badge/Web3Forms-black?style=flat&logo=&logoWidth=23)
+![](https://img.shields.io/badge/Netlify-black?style=flat&logo=netlify&logoWidth=23)
 
 ## 🚩 TABLE OF CONTENT
 
@@ -27,28 +30,41 @@
 
 This is a React-based e-commerce website that includes features such as user login, product listings, shopping cart and a contact form.
 
-### 🔍 Preview
-
-The following image shows the web application's appearance:
-
-![Project image](./add/path/to/image)
-
 ## 💻 USAGE
 
 ### 💬 User story
 
-`As a user...`
+`As a programmer, I want to be able to purchase all necessary products to do my day-job in one convenient place, so that I can spend more time coding to my heart’s content (p.s I hate Amazon).`
 
-### 💬 Main functionalities
+### 🔍 Preview
 
-///
+When the user visits the website they are greated by the following homepage.
+
+![bytehomepage](https://user-images.githubusercontent.com/118021969/228633515-ec7d1fd4-cb20-46ac-bd63-d68d6d573445.png)
+
+## 💻 Main functionalities
+
+- [ ] Account Authentication
+      The user can sign up to the web application using their Google account. This process is handled via Google's authentication service (Firebase).
+
+- [ ] Product Filter
+      The application consists of a vast array of different products for sale which are categorized into kits, depending on price and quality. When browsing the product section, the user can filter the results based on:
+
+- categories (keyboards, mice, monitors, desk chairs)
+- kits (Newbie, Ninja, Merge Master)
+
+- [ ] Contact Form
+      When the user submit the contact form, their details are handled using web3forms, an API based form backend that send the collected form data simultaneously to ByteBazaar company email.
+
+- [ ] Local Storage (basket)
+      The Basket component is linked to local storage.This means that anytime the user adds an item to the basket, the details of this item are stored in local storage and can be retrieved anytime the user comes back to our website. (Updating the basket triggers local storage to be updated as well)
 
 ## ✅ TECHNOLOGY USED
 
-[] Javascript
-[] Node.js
-[] React
-[] Firebase
+- [] Javascript
+- [] Node.js
+- [] React
+- [] Firebase
 
 ## 🚀 INSTALLATION
 
