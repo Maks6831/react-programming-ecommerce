@@ -11,6 +11,7 @@ export default function ContactForm() {
   const { isHiddenFeedback, setIsHiddenFeedback } = useAppState();
   const { h2Text, setH2Text } = useAppState();
 
+  // Track formData input (on each keystroke)
   const handleChange = (event) => {
     const { name, value } = event.target;
     console.log(event.target.value);
@@ -21,6 +22,9 @@ export default function ContactForm() {
   };
 
   let userName = "";
+
+  // When the form is submitted, data are handled using web3forms and ByteBazaar receives an email with the formData
+  // after submission, the user can see a confirmation of submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -54,7 +58,7 @@ export default function ContactForm() {
 
         // setTimeout(() => {
         //   setSuccess(false);
-        // }, 10000);
+        // }, 1000);
       })
       .catch((err) => console.log(err));
   };
