@@ -72,16 +72,16 @@ const Navbar = () => {
         <>
           {" "}
           {!currentUser ? (
-            <button
+            <Link
               className="buttons not-rendered"
               onClick={() => signupWithGoogle()}
             >
               Sign In
-            </button>
+            </Link>
           ) : (
-            <button className="buttons not-rendered" onClick={() => logout()}>
+            <Link className="buttons not-rendered" onClick={() => logout()}>
               Sign Out
-            </button>
+            </Link>
           )}{" "}
         </>
 
