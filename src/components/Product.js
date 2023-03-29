@@ -72,7 +72,7 @@ const Product = (props) => {
                 <div className="modal-content">
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
-                    <p style={{paddingTop: "5px"}}>Quantity in cart: {quantity}</p>
+                    <p style={{paddingTop: "5px"}}>Quantity in basket: {quantity}</p>
                 <button className="modal-navigation modal-navigation button" onClick={hideModal}>Continue shopping</button>
                 <Link className="modal-navigation" to="/basket">Go to basket</Link>
                 </div>
