@@ -43,13 +43,12 @@ export default function ContactForm() {
       body: data,
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         setSuccess(true);
         setIsHiddenForm(!isHiddenForm);
-        setIsHiddenFeedback(!isHiddenFeedback);
+        await setIsHiddenFeedback(!isHiddenFeedback);
 
         setTimeout(() => {
-          setH2Text(`Hello ${userName}`);
           setFormData((prevFormData) => ({
             ...prevFormData,
             name: "",
@@ -58,9 +57,13 @@ export default function ContactForm() {
           }));
         }, 5000);
 
+        return data;
         // setTimeout(() => {
         //   setSuccess(false);
         // }, 1000);
+      })
+      .then((data) => {
+        setH2Text(`Hello ${userName}`);
       })
       .catch((err) => console.log(err));
   };
@@ -78,10 +81,10 @@ export default function ContactForm() {
   return (
     <section className="form-container basic-shadow" data-aos="fade-down">
       <h2>
-        <span>[</span> {h2Text} <span>]</span>
+        <span>[</span> {success ? h2Text : "Contact Us"} <span>]</span>
       </h2>
-      <hr />
 
+      <hr />
       <form
         className={isHiddenForm ? "hidden" : "form"}
         onSubmit={handleSubmit}
