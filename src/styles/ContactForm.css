@@ -1,3 +1,20 @@
+/*---------- Common styles ----------*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/*---------- Form Container ----------*/
 .form-container {
   position: relative;
   width: 50%;
@@ -8,8 +25,6 @@
 
 .form,
 .form-feedback-card {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2rem;
   font-size: 1.3rem;
@@ -24,6 +39,7 @@
   z-index: 1000;
 }
 
+/*---------- X button ----------*/
 #clear-feedback {
   width: 3rem;
   position: absolute;
@@ -39,6 +55,7 @@
   border: none;
 }
 
+/*---------- Form content ----------*/
 .form-input-group {
   display: flex;
   justify-content: flex-start;
@@ -101,6 +118,7 @@
   font-weight: normal;
 }
 
+/*---------- submit button ----------*/
 #submit-btn {
   width: 40%;
   height: 3.3rem;
@@ -119,13 +137,7 @@
   background-color: #0062cc;
 }
 
-/*------feedback------*/
-
-.hidden {
-  display: none;
-}
-
-/*--------Media queries-----------*/
+/*-----------Media queries-----------*/
 
 @media (max-width: 768px) {
   .form-container {

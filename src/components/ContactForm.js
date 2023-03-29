@@ -86,7 +86,7 @@ export default function ContactForm() {
 
       <hr />
       <form
-        className={isHiddenForm ? "hidden" : "form"}
+        className={isHiddenForm ? "hidden" : "form flex-col"}
         onSubmit={handleSubmit}
         action="https://api.web3forms.com/submit"
         method="POST"
@@ -141,7 +141,11 @@ export default function ContactForm() {
         </button>
       </form>
       {success && (
-        <div className={isHiddenFeedback ? "hidden" : "form-feedback-card"}>
+        <div
+          className={
+            isHiddenFeedback ? "hidden" : "form-feedback-card flex-col"
+          }
+        >
           <button
             id="clear-feedback"
             aria-label="Close feedback"
