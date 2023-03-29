@@ -59,8 +59,9 @@ export default function Basket() {
 
   return (
     <div id="wrapper">
-      <section id="basket-container" className="basic-shadow .flex-col">
-        <div className="flex-row basket-top">
+      <section className="basic-shadow flex-col basket">
+        {/* Top */}
+        <div className="flex basket-top">
           <h1 id="basket-h1">
             <span>[</span> Your Basket <span>]</span>
           </h1>
@@ -71,30 +72,33 @@ export default function Basket() {
             Clear Basket
           </button>
         </div>
-        <section className="flex-col">
-          <table className=" flex-col item-list" id="basket">
-            <thead className="flex-row item-header">
-              <tr>
-                <th className="head name-col">Items</th>
-                <th className="head quantity-col">Quantity</th>
-                <th className="head price-col">Price</th>
-                <th className="head button-col">Update basket</th>
-              </tr>
-            </thead>
-            <tbody className="basket">
-              {localData?.map((product) => (
-                <BasketItem
-                  key={product.id}
-                  productID={product.id}
-                  name={product.name}
-                  price={product.price}
-                  quantity="1"
-                  removeLocalItem={() => removeLocalItem(product.id)}
-                />
-              ))}
-            </tbody>
-          </table>
-        </section>
+        {/* Table Container */}
+
+        <table className="flex-col">
+          {/* <thead className="flex-row item-header">
+            <tr className="flex-row">
+              <th className="">Your it</th>
+              <th className="">Quantity</th>
+              <th className="">Price</th>
+              <th className="">Update basket</th>
+            </tr>
+          </thead> */}
+          <tbody className="flex-col">
+            {localData?.map((product) => (
+              <BasketItem
+                key={product.id}
+                productID={product.id}
+                image={product.image}
+                alt={product.name}
+                name={product.name}
+                price={product.price}
+                quantity="1"
+                removeLocalItem={() => removeLocalItem(product.id)}
+              />
+            ))}
+          </tbody>
+        </table>
+
         <section className="flex-col" id="checkout">
           <h2 id="total-amount">
             Total: <span>£{totalPrice}</span>
