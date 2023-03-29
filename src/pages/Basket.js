@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 import BasketItem from "../components/BasketItem";
 import "../styles/Basket.css";
 
@@ -57,8 +61,12 @@ export default function Basket() {
     );
   }
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div id="wrapper">
+    <div id="wrapper" data-aos="fade-right">
       <section className="basic-shadow flex-col basket">
         {/* Top */}
         <div className="flex basket-top">
