@@ -5,47 +5,42 @@ import cartImage from '../images/image17.png'
 import { useAuth, AutimhProvider, AuthContext } from "../contexts/AuthContext";
 import { auth, provider } from "../pages/Firebase";
 
-
 const Navbar = () => {
   const { currentUser, logout, signupWithGoogle } = useAuth();
-  const[showMenu, setShowMenu] = useState(true);
-  function mediaQueriesTwo(screenWidth){
-    if(screenWidth.matches){
-       setShowMenu(!showMenu)
+  const [showMenu, setShowMenu] = useState(true);
+  function mediaQueriesTwo(screenWidth) {
+    if (screenWidth.matches) {
+      setShowMenu(!showMenu);
     } else {
       setShowMenu(true);
     }
-    
-}
-  useEffect(()=>{
-    const screenWidthTwo = window.matchMedia("(max-width: 730px)")
+  }
+  useEffect(() => {
+    const screenWidthTwo = window.matchMedia("(max-width: 730px)");
     mediaQueriesTwo(screenWidthTwo);
     screenWidthTwo.addListener(mediaQueriesTwo);
-
-    
-  },[])
-
-
-
+  }, []);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu)
-  }
+    setShowMenu(!showMenu);
+  };
 
   return (
     <nav className="navBar">
       <div className="brand-hamburger">
-      <Link to="/" className="brandName">
-        ByteBazaar
-        
-      </Link>
-      <div className="icon">
-      <i className="fa-solid fa-bars fa-lg" style={{color: "#ffffff"}} onClick={toggleMenu}></i>
+        <Link to="/" className="brandName">
+          ByteBazaar
+        </Link>
+        <div className="icon">
+          <i
+            className="fa-solid fa-bars fa-lg"
+            style={{ color: "#ffffff" }}
+            onClick={toggleMenu}
+          ></i>
+        </div>
       </div>
-      </div>
-      
-      
-      <ul className={showMenu ? 'buttonContainer': 'hidden'}>
+
+      <ul className={showMenu ? "buttonContainer" : "hidden"}>
         <NavLink
           to="/"
           end
@@ -111,6 +106,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;

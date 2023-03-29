@@ -1,22 +1,11 @@
-/*---------- Common styles ----------*/
-.basic-shadow {
-  -webkit-box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
-}
-
 .flex-col {
   display: flex;
   flex-direction: column;
 }
 
-.flex-row {
+.flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-li {
-  list-style: none;
+  flex-direction: row;
 }
 
 a {
@@ -24,27 +13,33 @@ a {
   color: unset;
 }
 
-/*---------- Containers ----------*/
+.basic-shadow {
+  -webkit-box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 0.1);
+}
+
+/*---------- Main Containers ----------*/
 #wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 5rem 1rem;
+  padding: 1rem 1rem;
   height: 100%;
-}
-
-#basket-container {
   width: 60%;
-  height: 100%;
-  padding: 2rem;
-  background-color: white;
-  margin-bottom: 5rem;
+  margin: auto;
 }
 
+.basket {
+  padding: 3rem;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+/*---------- Headings ----------*/
 .basket-top {
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
-/*---------- Heading elements ----------*/
 #basket-h1 {
   font-size: 2rem;
   text-align: left;
@@ -58,79 +53,52 @@ a {
   font-weight: bold;
   color: black;
 }
-
-/*----------Single item row (basket item)----------*/
-.item .name,
-.name-col {
-  width: 40%;
-}
-
-.item .quantity,
-.item .price,
-.item .currency,
-.quantity-col,
-.price-col {
-  width: 20%;
-}
-
-.item-header {
-  padding: 2rem 0.5rem;
-  margin: 2rem 0rem;
-  font-size: 1.4rem;
-  background-color: #00000003;
+/*---------- Basket Rows----------*/
+.basket-row {
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(237, 236, 236, 0.598);
+  position: relative; /*so that the cross to delete item can be set as absolute*/
 }
 
 .basket-card {
-  padding: 1rem 0.5rem;
-  margin: 0.5rem;
-  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
-}
-
-.basket-card,
-.remove {
   font-size: 1.3rem;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.6);
+  color: #303336;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-/*---------- Grey Buttons ----------*/
-
-#remove-cross {
-  display: none;
+.basket-img {
+  padding-right: 0.5rem;
+  max-width: 4rem;
+  max-height: auto;
 }
 
-.remove-item-li {
-  padding: 0;
+.name {
+  font-size: 1.6rem;
 }
 
-.remove {
-  width: 100%;
-  height: 100%;
-  padding: 0.9rem 0.7rem;
+.basket-card-left {
+  width: 60%;
 }
 
-.clearCart-btn {
-  padding: 1rem 1rem;
-  margin-right: 0.5rem;
+.basket-card-right {
+  width: 40%;
+  justify-content: space-between;
 }
 
-.basket-btn {
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.6);
-  background-color: #f5f5f59b;
-  -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
-  border: none;
-  font-size: 1.3rem;
-}
-
+.name:hover,
+.quantity:hover,
+.price:hover,
 .basket-btn:hover {
-  background-color: #e9e9ed;
+  color: #000000;
 }
 
-/*---------- Checkout ----------*/
+tbody {
+  border-bottom: 1px solid rgba(237, 236, 236, 0.598);
+}
 
+/*---------- Checkout Section ----------*/
 #total-amount {
   padding: 1rem;
   font-size: 2rem;
@@ -156,60 +124,138 @@ a {
   cursor: pointer;
 }
 .checkout-btn:hover {
-  background-color: #4c12a1;
+  background-color: #0062cc;
 }
 
-.purple-link {
+.blue-link {
   font-size: 1.5rem;
-  color: #4c12a1;
+  color: #0062cc;
   padding-top: 1rem;
   width: 100%;
   text-align: center;
 }
 
-.purple-link:hover {
+.blue-link:hover {
   font-size: 1.7rem;
   color: rgba(0, 0, 0, 0.6);
 }
 
-/*---------- MEDIA QUERIES ----------*/
+/*---------- Buttons ---------- */
 
-@media (min-width: 1794px) {
-  .basket-btn {
-    font-size: 1.2rem;
-    padding: 1rem 0.5rem;
+.basket-btn {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+
+  border: none;
+  font-size: 1.3rem;
+}
+
+.clearCart-btn {
+  padding: 1rem 1rem;
+  background-color: #f5f5f59b;
+}
+.clearCart-btn:hover {
+  background-color: #e9e9ed;
+}
+
+#remove-cross {
+  display: none;
+}
+
+/* ----------Media Queries---------- */
+@media (max-width: 1200px) {
+  #wrapper {
+    width: 90%;
   }
 }
 
-@media (min-width: 1462px) and (max-width: 1793px) {
-  .basket-btn {
-    font-size: 1rem;
-    padding: 0.8rem 0.3rem;
+@media (max-width: 900px) {
+  #wrapper {
+    width: 100%;
   }
-}
+  .basket-card-left {
+    width: 100%;
+    justify-content: space-between;
+  }
 
-@media (max-width: 1400px) {
-  #remove-text,
-  .button-col {
+  .name,
+  #total-amount {
+    font-size: 1.8rem;
+  }
+
+  .basket-card-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .basket-card {
+    font-size: 1.1rem;
+  }
+  .basket-img {
+    max-width: 8em;
+  }
+
+  .quantity,
+  .price {
+    padding-right: 1rem;
+  }
+
+  #remove-text {
     display: none;
   }
+
   #remove-cross {
     display: flex;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
-  .quantity-col,
-  .price-col {
-    width: 25%;
-  }
   .checkout-btn {
     width: 100%;
-    margin: auto;
-  }
-  #total-amount {
     font-size: 1.5rem;
   }
-  .purple-link {
+}
+@media (max-width: 768px) {
+  .name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .name {
+    font-size: 1.4rem;
+  }
+
+  #basket-h1 {
+    font-size: 1.5rem;
+  }
+
+  .clearCart-btn {
+    padding: 0.5rem 0.3rem;
+    background-color: #f5f5f59b;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .basket {
+    /* margin: 0.8rem; */
+    padding: 0.5rem;
+  }
+
+  .basket-card-left {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .basket-card,
+  .name {
+    font-size: 1rem;
+  }
+
+  .basket-img {
+    max-width: 3rem;
   }
 }

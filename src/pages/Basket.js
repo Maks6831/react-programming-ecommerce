@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 import BasketItem from "../components/BasketItem";
 import "../styles/Basket.css";
 
@@ -57,10 +61,15 @@ export default function Basket() {
     );
   }
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div id="wrapper">
-      <section id="basket-container" className="basic-shadow .flex-col">
-        <div className="flex-row basket-top">
+    <div id="wrapper" data-aos="fade-right">
+      <section className="basic-shadow flex-col basket">
+        {/* ---------- Heading ---------- */}
+        <div className="flex basket-top">
           <h1 id="basket-h1">
             <span>[</span> Your Basket <span>]</span>
           </h1>
@@ -71,35 +80,32 @@ export default function Basket() {
             Clear Basket
           </button>
         </div>
-        <section className="flex-col">
-          <ul className=" flex-col item-list" id="basket">
-            <ul className="flex-row item-header">
-              <li className="head name-col">Items</li>
-              <li className="head quantity-col">Quantity</li>
-              <li className="head price-col">Price</li>
-              <li className="head button-col">Update basket</li>
-            </ul>
-            <ul className="basket">
-              {localData?.map((product) => (
-                <BasketItem
-                  key={product.id}
-                  productID={product.id}
-                  name={product.name}
-                  price={product.price}
-                  quantity="1"
-                  removeLocalItem={() => removeLocalItem(product.id)}
-                />
-              ))}
-            </ul>
-          </ul>
-        </section>
+
+        <table className="flex-col">
+          <tbody className="flex-col">
+            {/*---------- Dynamically rendered basket items ----------*/}
+            {localData?.map((product) => (
+              <BasketItem
+                key={product.id}
+                productID={product.id}
+                image={product.image}
+                alt={product.name}
+                name={product.name}
+                price={product.price}
+                quantity="1"
+                removeLocalItem={() => removeLocalItem(product.id)}
+              />
+            ))}
+          </tbody>
+        </table>
+        {/*---------- Checkout section ----------*/}
         <section className="flex-col" id="checkout">
           <h2 id="total-amount">
             Total: <span>£{totalPrice}</span>
           </h2>
 
           <button className="checkout-btn">Checkout</button>
-          <Link to="/products" className="purple-link">
+          <Link to="/products" className="blue-link">
             Continue Shopping
           </Link>
         </section>

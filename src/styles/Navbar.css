@@ -8,18 +8,18 @@
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .brand-hamburger {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .icon {
-    display: none;
+  display: none;
 }
 
 
@@ -45,9 +45,9 @@
 }
 
 .userName {
-    color: white;
-    margin: 9px;
-    font-size: 1.2rem;
+  color: white;
+  margin: 9px;
+  font-size: 1.2rem;
 }
 
 /**/
@@ -60,16 +60,15 @@
 }
 
 .buttonContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav h1 {
-    color: white;
-    display: flex;
-    align-items: center;
-    
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .buttons {
@@ -88,21 +87,48 @@ nav h1 {
 }
 
 .brandName {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
   color: white;
   text-decoration: none;
   padding-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 @media only screen and (max-width: 730px) {
+  .icon {
+    display: inline;
+    margin-right: 10px;
+    height: 1.2rem;
+  }
+
+  .navBar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .buttons {
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(99, 98, 98);
+    font-size: 14px;
+    max-height: 30px;
+    color: white;
+  }
 
     .icon {
         display: inline;
