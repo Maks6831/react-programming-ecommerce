@@ -14,6 +14,7 @@ const Product = (props) => {
     const [showModal, setShowModal] = useState(false);
     const {formData, productID, setProductID} = useAppState()
     const [animation, setAnimation] = useState('fade-up');
+    const [quantity, setQuantity] = useState('1');
     
     useEffect(()=>{
       AOS.init({duration:2000});
@@ -39,6 +40,7 @@ const Product = (props) => {
           const index = savedProducts.findIndex(obj => obj.id === productToAdd.id)
           savedProducts[index].quantity = +savedProducts[index].quantity + 1;
           console.log(savedProducts[index].quantity)
+          setQuantity(savedProducts[index].quantity)
         } else {
           savedProducts.push(productToAdd);
         } 
@@ -70,6 +72,7 @@ const Product = (props) => {
                 <div className="modal-content">
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
+                    <p style={{paddingTop: "5px"}}>quantity: {quantity}</p>
                 <button className="modal-navigation modal-navigation button" onClick={hideModal}>Continue shopping</button>
                 <Link className="modal-navigation" to="/basket">Go to basket</Link>
                 </div>
