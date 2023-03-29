@@ -75,7 +75,8 @@ const Products = (props) => {
             <div data-aos="fade-down" className="title-sections">
             <h1>Our Products</h1>
             <div className="filter-section">
-                <div onClick={()=> setOpen(!open)}>Filter
+                <div onClick={()=> setOpen(!open)} className="filtertwo">
+                    <div className="filter-button">Filter</div>
                 {open && <DropDownMenu handleButton={handleButton}/>} 
                 </div>
                 <h2 className='title-h2'>{filterName}</h2>
