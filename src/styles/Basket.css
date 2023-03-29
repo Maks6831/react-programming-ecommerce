@@ -24,11 +24,12 @@ a {
   height: 100%;
   width: 60%;
   margin: auto;
+  margin-bottom: 2rem;
 }
 
 .basket {
   padding: 3rem;
-  height: 90vh;
+  min-height: 90vh;
   width: 100%;
   margin: auto;
 }
