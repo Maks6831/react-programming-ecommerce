@@ -4,13 +4,13 @@ import "../styles/Basket.css";
 
 export default function BasketItem({ name, quantity, price, removeLocalItem }) {
   return (
-    <ul className=" flex-row item">
-      <li className=" basket-card name">
+    <tr className=" flex-row item">
+      <th className=" basket-card name">
         <Link to={`/products/${name}`}>{name}</Link>
-      </li>
-      <li className=" basket-card quantity">{quantity}</li>
-      <li className=" basket-card price">£{price}</li>
-      <li className=" basket-card remove-item-li">
+      </th>
+      <td className=" basket-card quantity">{quantity}</td>
+      <td className=" basket-card price">£{price}</td>
+      <td className=" basket-card remove-item-li">
         <button
           className="remove basket-btn"
           onClick={removeLocalItem}
@@ -19,7 +19,26 @@ export default function BasketItem({ name, quantity, price, removeLocalItem }) {
           <span id="remove-text">Remove Item</span>
           <span id="remove-cross"> &times;</span>
         </button>
-      </li>
-    </ul>
+      </td>
+    </tr>
   );
+  // return (
+  //   <ul className=" flex-row item">
+  //     <li className=" basket-card name">
+  //       <Link to={`/products/${name}`}>{name}</Link>
+  //     </li>
+  //     <li className=" basket-card quantity">{quantity}</li>
+  //     <li className=" basket-card price">£{price}</li>
+  //     <li className=" basket-card remove-item-li">
+  //       <button
+  //         className="remove basket-btn"
+  //         onClick={removeLocalItem}
+  //         aria-label="Remove item from basket"
+  //       >
+  //         <span id="remove-text">Remove Item</span>
+  //         <span id="remove-cross"> &times;</span>
+  //       </button>
+  //     </li>
+  //   </ul>
+  // );
 }
