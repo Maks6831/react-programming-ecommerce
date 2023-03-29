@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import UseScrollToTop from "../components/ScrollToTop";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -32,6 +33,7 @@ export default function Basket() {
           price: localData[i].price,
           image: localData[i].image,
         });
+        window.scrollTo(0, 0);
       }
       //Update total price accordingly
       setTotalPrice(
