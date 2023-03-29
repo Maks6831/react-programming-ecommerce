@@ -156,18 +156,18 @@ a {
   cursor: pointer;
 }
 .checkout-btn:hover {
-  background-color: #4c12a1;
+  background-color: #0062cc;
 }
 
-.purple-link {
+.blue-link {
   font-size: 1.5rem;
-  color: #4c12a1;
+  color: #0062cc;
   padding-top: 1rem;
   width: 100%;
   text-align: center;
 }
 
-.purple-link:hover {
+.blue-link:hover {
   font-size: 1.7rem;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -209,7 +209,7 @@ a {
   #total-amount {
     font-size: 1.5rem;
   }
-  .purple-link {
+  .blue-link {
     font-size: 1.2rem;
   }
 }

@@ -99,7 +99,7 @@ export default function Basket() {
           </h2>
 
           <button className="checkout-btn">Checkout</button>
-          <Link to="/products" className="purple-link">
+          <Link to="/products" className="blue-link">
             Continue Shopping
           </Link>
         </section>

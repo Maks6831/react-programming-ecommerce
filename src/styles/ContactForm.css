@@ -2,11 +2,8 @@
   position: relative;
   width: 50%;
   min-height: 30vh;
-  padding: 1rem;
+  padding: 2rem;
   margin: auto;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
 }
 
 .form,
@@ -19,12 +16,12 @@
 }
 
 .form-feedback-card {
+  font-size: 1.3rem;
   line-height: 2;
   text-align: center;
   width: 80%;
   margin: auto;
   z-index: 1000;
-  background-color: transparent;
 }
 
 #clear-feedback {
@@ -39,7 +36,7 @@
 
 #clear-feedback span:hover {
   color: rgb(180, 7, 7);
-  border: 1px solid lightgray;
+  border: none;
 }
 
 .form-input-group {
@@ -84,8 +81,6 @@
 }
 
 .form-textarea-group {
-  display: flex;
-  flex-direction: column;
   padding: 0.5rem 0.5rem 2.5rem 0.5rem;
 }
 
@@ -112,15 +107,14 @@
   bottom: 1rem;
   left: 30%;
   font-size: 1.3rem;
-  border-radius: 0.5rem;
   padding: 0.8rem;
-  border: 1px solid #f5f5f5;
   cursor: pointer;
+  color: white;
+  background-color: black;
 }
 
 #submit-btn:hover {
-  color: white;
-  background-color: black;
+  background-color: #0062cc;
 }
 
 /*------feedback------*/

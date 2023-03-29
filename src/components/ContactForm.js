@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 import "../styles/ContactForm.css";
 
@@ -14,7 +16,7 @@ export default function ContactForm() {
   // Track formData input (on each keystroke)
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target.value);
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
@@ -69,8 +71,12 @@ export default function ContactForm() {
     setH2Text("Contact us");
   };
 
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <section className="form-container basic-shadow">
+    <section className="form-container basic-shadow" data-aos="fade-down">
       <h2>
         <span>[</span> {h2Text} <span>]</span>
       </h2>
@@ -113,7 +119,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
         </div>
-        <div className="form-textarea-group">
+        <div className="form-textarea-group flex-col">
           <label htmlFor="textarea">Message:</label>
           <textarea
             name="message"
@@ -130,7 +136,6 @@ export default function ContactForm() {
         <button id="submit-btn" aria-label="Send message">
           Send
         </button>
-        {/* {success && alert("Thank you for contacting us!😎")} */}
       </form>
       {success && (
         <div className={isHiddenFeedback ? "hidden" : "form-feedback-card"}>
