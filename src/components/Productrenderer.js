@@ -60,7 +60,7 @@ function hideModal() {
                 <div className="modal-content">
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
-                    <p style={{paddingTop: "5px"}}>quantity: {quantity}</p>
+                    <p style={{paddingTop: "5px"}}>Quantity in cart: {quantity}</p>
                 <button className="modal-navigation" onClick={hideModal}>Stay on page</button>
                 <Link className="modal-navigation" to="/products" end>Go to products page</Link>
                 <Link className="modal-navigation" to="/basket" end>Go to basket</Link>
