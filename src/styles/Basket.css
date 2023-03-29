@@ -30,6 +30,7 @@ a {
   padding: 3rem;
   height: 100%;
   width: 100%;
+  margin: auto;
 }
 
 /*---------- Headings ----------*/
@@ -240,7 +241,7 @@ tbody {
 
 @media (max-width: 480px) {
   .basket {
-    margin: 0.8rem;
+    /* margin: 0.8rem; */
     padding: 0.5rem;
   }
 
