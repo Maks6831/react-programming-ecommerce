@@ -1,32 +1,45 @@
+/*---------- Common styles ----------*/
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/*---------- Form Container ----------*/
 .form-container {
   position: relative;
   width: 50%;
   min-height: 30vh;
-  padding: 1rem;
+  padding: 2rem;
   margin: auto;
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.33);
 }
 
 .form,
 .form-feedback-card {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 2rem;
   font-size: 1.3rem;
 }
 
 .form-feedback-card {
+  font-size: 1.3rem;
   line-height: 2;
   text-align: center;
   width: 80%;
   margin: auto;
   z-index: 1000;
-  background-color: transparent;
 }
 
+/*---------- X button ----------*/
 #clear-feedback {
   width: 3rem;
   position: absolute;
@@ -39,9 +52,10 @@
 
 #clear-feedback span:hover {
   color: rgb(180, 7, 7);
-  border: 1px solid lightgray;
+  border: none;
 }
 
+/*---------- Form content ----------*/
 .form-input-group {
   display: flex;
   justify-content: flex-start;
@@ -54,6 +68,7 @@
   text-align: center;
   font-weight: 100;
   color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 1rem;
 }
 
 .form-container span {
@@ -84,8 +99,6 @@
 }
 
 .form-textarea-group {
-  display: flex;
-  flex-direction: column;
   padding: 0.5rem 0.5rem 2.5rem 0.5rem;
 }
 
@@ -105,31 +118,26 @@
   font-weight: normal;
 }
 
+/*---------- submit button ----------*/
 #submit-btn {
   width: 40%;
   height: 3.3rem;
-  position: absolute;
-  bottom: 1rem;
+  margin: auto;
+  /* position: absolute;
+  bottom: 1rem; */
   left: 30%;
   font-size: 1.3rem;
-  border-radius: 0.5rem;
-  padding: 0.8rem;
-  border: 1px solid #f5f5f5;
+  /* padding: 0.8rem; */
   cursor: pointer;
-}
-
-#submit-btn:hover {
   color: white;
   background-color: black;
 }
 
-/*------feedback------*/
-
-.hidden {
-  display: none;
+#submit-btn:hover {
+  background-color: #0062cc;
 }
 
-/*--------Media queries-----------*/
+/*-----------Media queries-----------*/
 
 @media (max-width: 768px) {
   .form-container {
@@ -159,8 +167,7 @@
   }
 
   #submit-btn {
-    width: 80%;
-    left: 10%;
+    width: 90%;
     font-size: 1.1rem;
   }
 }

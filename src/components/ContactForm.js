@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 import "../styles/ContactForm.css";
 
@@ -11,9 +13,10 @@ export default function ContactForm() {
   const { isHiddenFeedback, setIsHiddenFeedback } = useAppState();
   const { h2Text, setH2Text } = useAppState();
 
+  // Track formData input (on each keystroke)
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(event.target.value);
+
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value,
@@ -21,6 +24,9 @@ export default function ContactForm() {
   };
 
   let userName = "";
+
+  // When the form is submitted, data are handled using web3forms and ByteBazaar receives an email with the formData
+  // after submission, the user can see a confirmation of submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -37,13 +43,12 @@ export default function ContactForm() {
       body: data,
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         setSuccess(true);
         setIsHiddenForm(!isHiddenForm);
-        setIsHiddenFeedback(!isHiddenFeedback);
+        await setIsHiddenFeedback(!isHiddenFeedback);
 
         setTimeout(() => {
-          setH2Text(`Hello ${userName}`);
           setFormData((prevFormData) => ({
             ...prevFormData,
             name: "",
@@ -52,9 +57,13 @@ export default function ContactForm() {
           }));
         }, 5000);
 
+        return data;
         // setTimeout(() => {
         //   setSuccess(false);
-        // }, 10000);
+        // }, 1000);
+      })
+      .then((data) => {
+        setH2Text(`Hello ${userName}`);
       })
       .catch((err) => console.log(err));
   };
@@ -65,15 +74,19 @@ export default function ContactForm() {
     setH2Text("Contact us");
   };
 
-  return (
-    <section className="form-container basic-shadow">
-      <h2>
-        <span>[</span> {h2Text} <span>]</span>
-      </h2>
-      <hr />
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
+  return (
+    <section className="form-container basic-shadow" data-aos="fade-down">
+      <h2>
+        <span>[</span> {success ? h2Text : "Contact Us"} <span>]</span>
+      </h2>
+
+      <hr />
       <form
-        className={isHiddenForm ? "hidden" : "form"}
+        className={isHiddenForm ? "hidden" : "form flex-col"}
         onSubmit={handleSubmit}
         action="https://api.web3forms.com/submit"
         method="POST"
@@ -109,7 +122,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
         </div>
-        <div className="form-textarea-group">
+        <div className="form-textarea-group flex-col">
           <label htmlFor="textarea">Message:</label>
           <textarea
             name="message"
@@ -126,10 +139,13 @@ export default function ContactForm() {
         <button id="submit-btn" aria-label="Send message">
           Send
         </button>
-        {/* {success && alert("Thank you for contacting us!😎")} */}
       </form>
       {success && (
-        <div className={isHiddenFeedback ? "hidden" : "form-feedback-card"}>
+        <div
+          className={
+            isHiddenFeedback ? "hidden" : "form-feedback-card flex-col"
+          }
+        >
           <button
             id="clear-feedback"
             aria-label="Close feedback"
