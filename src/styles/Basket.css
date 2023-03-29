@@ -84,6 +84,13 @@ a {
   justify-content: space-between;
 }
 
+.name:hover,
+.quantity:hover,
+.price:hover,
+.basket-btn:hover {
+  color: #000000;
+}
+
 /*---------- Checkout Section ----------*/
 #total-amount {
   padding: 1rem;

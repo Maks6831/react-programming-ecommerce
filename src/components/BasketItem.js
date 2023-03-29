@@ -27,7 +27,7 @@ export default function BasketItem({
             aria-label="Remove item from basket"
           >
             <span id="remove-text">Delete</span>
-            <span id="remove-cross"> &times;</span>
+            {/* <span id="remove-cross"> &times;</span> */}
           </button>
         </td>
       </div>
