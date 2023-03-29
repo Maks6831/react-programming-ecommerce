@@ -22,7 +22,7 @@ a {
 #wrapper {
   padding: 1rem 1rem;
   height: 100%;
-  width: 60%;
+  width: 75%;
   margin: auto;
 }
 
@@ -158,6 +158,11 @@ a {
 }
 
 /* ----------Media Queries---------- */
+@media (max-width: 1400px) {
+  #wrapper {
+    width: 90%;
+  }
+}
 
 @media (max-width: 900px) {
   #wrapper {

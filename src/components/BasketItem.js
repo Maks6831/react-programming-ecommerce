@@ -33,23 +33,4 @@ export default function BasketItem({
       </div>
     </tr>
   );
-  // return (
-  //   <ul className=" flex-row item">
-  //     <li className=" basket-card name">
-  //       <Link to={`/products/${name}`}>{name}</Link>
-  //     </li>
-  //     <li className=" basket-card quantity">{quantity}</li>
-  //     <li className=" basket-card price">£{price}</li>
-  //     <li className=" basket-card remove-item-li">
-  //       <button
-  //         className="remove basket-btn"
-  //         onClick={removeLocalItem}
-  //         aria-label="Remove item from basket"
-  //       >
-  //         <span id="remove-text">Remove Item</span>
-  //         <span id="remove-cross"> &times;</span>
-  //       </button>
-  //     </li>
-  //   </ul>
-  // );
 }
