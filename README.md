@@ -11,6 +11,7 @@
 ![](https://img.shields.io/badge/Firebase-black?style=flat&logo=firebase&logoWidth=23)
 ![](https://img.shields.io/badge/Web3Forms-black?style=flat&logo=&logoWidth=23)
 ![](https://img.shields.io/badge/Netlify-black?style=flat&logo=netlify&logoWidth=23)
+![](https://img.shields.io/badge/Figma-black?style=flat&logo=figma&logoWidth=23)
 
 ## 🚩 TABLE OF CONTENT
 
