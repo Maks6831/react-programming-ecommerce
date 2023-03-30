@@ -1,8 +1,12 @@
+#homepage-wrap {
+  overflow: hidden;
+}
+
 .hero {
   background-image: url("../images/macbooknight.jpg");
 
   background-attachment: fixed;
- background-position: center center; 
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -50,7 +54,6 @@
   flex-direction: row;
   justify-content: center;
   width: 90%;
-  
 }
 
 .about-title {
@@ -59,17 +62,16 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
 }
 
-.about-title h2{
+.about-title h2 {
   font-size: 2.5rem;
 }
 
 .about-description {
   display: flex;
   flex-basis: 0;
-  flex-grow: 1;  
+  flex-grow: 1;
   justify-content: flex-end;
   width: 30%;
   line-height: 2;
@@ -94,9 +96,4 @@
     margin-bottom: 20px;
     text-align: center;
   }
-
 }
-
-
-
-
