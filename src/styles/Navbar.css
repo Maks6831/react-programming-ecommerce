@@ -107,6 +107,8 @@ nav h1 {
     height: 1.2rem;
   }
 
+ 
+
   .navBar {
     flex-direction: column;
     height: auto;
@@ -171,7 +173,7 @@ nav h1 {
     .cartImage {
       padding: 5px;
       margin-top: 5px;
-      max-width: 70px;
+      max-width: 60px;
       height: auto;
     }
   
