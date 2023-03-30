@@ -225,6 +225,12 @@ tbody {
   }
 }
 
+@media (max-width: 730px){
+  .basket {
+    margin-top: 3.5rem;
+  }
+}
+
 @media (max-width: 576px) {
   .name {
     font-size: 1.4rem;

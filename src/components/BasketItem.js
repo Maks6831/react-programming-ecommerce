@@ -19,7 +19,7 @@ export default function BasketItem({
       </th>
       <div className="flex basket-card basket-card-right">
         <td className="  quantity">x {quantity}</td>
-        <td className=" price">£{price * quantity}</td>
+        <td className=" price">£{(price * quantity).toFixed(2)}</td>
         <td className=" remove-item">
           <button
             className="remove-btn basket-btn"
