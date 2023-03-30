@@ -6,7 +6,7 @@ export default function Footer() {
     <footer id="main-footer">
       <small>
         {" "}
-        Made with ❤️ by{" "}
+        Made with ❤️ by <br/>
         <a
           href="https://github.com/senseilein"
           target="_blank"
