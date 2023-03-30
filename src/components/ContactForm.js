@@ -58,9 +58,6 @@ export default function ContactForm() {
         }, 5000);
 
         return data;
-        // setTimeout(() => {
-        //   setSuccess(false);
-        // }, 1000);
       })
       .then((data) => {
         setH2Text(`Hello ${userName}`);
@@ -74,6 +71,7 @@ export default function ContactForm() {
     setH2Text("Contact us");
   };
 
+  // Form animation
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);

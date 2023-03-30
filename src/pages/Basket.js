@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import UseScrollToTop from "../components/ScrollToTop";
 
 import "aos/dist/aos.css";
 import AOS from "aos";
@@ -8,18 +7,18 @@ import AOS from "aos";
 import BasketItem from "../components/BasketItem";
 import "../styles/Basket.css";
 
-// Exported function
 export default function Basket() {
   // The state used to control this component
   const [localData, setLocalData] = useState([]);
 
-  // state use to control the total price of all items in the basket
+  // state used to control the total price of all items in the basket
   const [totalPrice, setTotalPrice] = useState(0);
 
   // Sets the variable localData to include the LocalStorage object
   useEffect(() => {
     setLocalData(JSON.parse(localStorage.getItem("savedProducts")) || []);
   }, []);
+
   //If localData has a value, create an array called localProducts
   //and populate it with the local storage object in an accessible format
   //runs each time localData changes
@@ -27,7 +26,7 @@ export default function Basket() {
     if (localData.length > 0) {
       let localProducts = [];
       for (let i = 0; i < localData.length; i++) {
-        localData[i].total = localData[i].price * localData[i].quantity
+        localData[i].total = localData[i].price * localData[i].quantity;
         localProducts.push({
           id: localData[i].id,
           name: localData[i].name,
@@ -46,6 +45,7 @@ export default function Basket() {
       setTotalPrice(0);
     }
   }, [localData]);
+
   // Enables us to clear localStorage and the arrays. Allowing for a remove all button
   function clearLocalStorage() {
     localStorage.clear();
