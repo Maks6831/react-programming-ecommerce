@@ -138,7 +138,6 @@ tbody {
 }
 
 .blue-link:hover {
-  font-size: 1.7rem;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -225,7 +224,7 @@ tbody {
   }
 }
 
-@media (max-width: 730px){
+@media (max-width: 730px) {
   .basket {
     margin-top: 3.5rem;
   }
@@ -272,6 +271,4 @@ tbody {
   .basket-img {
     max-width: 3rem;
   }
-
- 
 }
