@@ -1,4 +1,4 @@
-# README FILE GENERATOR
+# BYTEBAZAAR - REACT PROGRAMMING E-COMMERCE
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -34,7 +34,7 @@ This is a React-based e-commerce website that includes features such as user log
 
 ### 💬 User story
 
-`As a programmer, I want to be able to purchase all necessary products to do my day-job in one convenient place, so that I can spend more time coding to my heart’s content (p.s I hate Amazon).`
+`As a programmer, I want to be able to purchase all necessary products to do my day-job in one convenient place, so that I can spend more time coding to my heart’s content.`
 
 ### 🔍 Preview
 
@@ -61,24 +61,35 @@ When the user visits the website they are greated by the following homepage.
 
 ## ✅ TECHNOLOGY USED
 
-- [] Javascript
-- [] Node.js
-- [] React
-- [] Firebase
+- [ ] HTML5 & CSS3
+- [ ] Javascript
+- [ ] Node.js
+- [ ] React
+- [ ] [Firebase] for user authentication
+- [ ] [Web3Forms](https://web3forms.com/#start) for form handling
+- [ ] AOS npm package [(Animation On Scroll)](https://www.npmjs.com/package/aos)
+- [ ] Netlify for deployment
 
 ## 🚀 INSTALLATION
 
-No installation is required.
-[You can visit the page via this link](https//bytebazaar.netlify.app)
+[The ByteBazaar website is accessible online via this link](https//bytebazaar.netlify.app)
+
+If you want to access the project locally, do the following:
+
+- Fork the Github repository
+- Clone the repository to your local machine
+- Open the repository using your favourite IDE
+- In your terminal execute `npm i` or `npm install` to install all dependencies
 
 ## ✅ TESTS
 
-No tests available at the moment.
+There are no tests available at the moment.
 
 ## 💬 CREDITS
 
-- [Ebay](https://ebay.co.uk) & [Pixabay](https://pixabay.com)- Product images
+- [Ebay](https://ebay.co.uk) & [Pixabay](https://pixabay.com) - Product images
 - [icon-icons](https://icon-icons.com/) - Icons
+- A big thank you goes to our teacher and TA's at Trilogy Bootcamp
 
 ## ✨ CONTRIBUTING
 
@@ -86,7 +97,8 @@ All contributions are welcome. Contribution guidelines will be available soon.
 
 ## ❔ QUESTIONS
 
-- If you have any questions, [please click here to send us an email.](mailto:bytebazaar@gmail.com)
+If you have any questions, [please click here to send us an email.](mailto:bytebazaar@gmail.com)
+Our team will get back to you as soon as possible.
 
 ## 📃 LICENSE
 
