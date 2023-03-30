@@ -4,6 +4,7 @@ import AOS from "aos";
 
 const Achero = () => {
   useEffect(() => {
+    // Aos animation duration
     AOS.init({ duration: 2000 });
   }, []);
   return (

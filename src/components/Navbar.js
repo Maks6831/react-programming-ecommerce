@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import '../styles/Navbar.css';
 import cartImage from '../images/image17.png'
-import { useAuth, AutimhProvider, AuthContext } from "../contexts/AuthContext";
-import { auth, provider } from "../pages/Firebase";
+import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {
   const { currentUser, logout, signupWithGoogle } = useAuth();
+  // state for mobile navbar
   const [showMenu, setShowMenu] = useState(true);
+  // function which checks viewport length and changes states depending on viewportlength
   function mediaQueriesTwo(screenWidth) {
     if (screenWidth.matches) {
       setShowMenu(!showMenu);
@@ -16,11 +17,14 @@ const Navbar = () => {
     }
   }
   useEffect(() => {
+    // calling viewport length function (adds listener)
     const screenWidthTwo = window.matchMedia("(max-width: 730px)");
     mediaQueriesTwo(screenWidthTwo);
     screenWidthTwo.addListener(mediaQueriesTwo);
   }, []);
 
+
+  // hamburger function
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };

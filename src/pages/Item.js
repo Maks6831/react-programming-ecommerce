@@ -17,14 +17,16 @@ const Item = () => {
     const [relatedItems, setRelatedItems] = useState([]);
     const { item } = useParams()
     useEffect(()=>{
+        // finds the item from json and sets into current item
         setCurrentItem(itemInfo.filter((id)=>((id.name === item)))) 
         AOS.init({duration:2000});  
         window.scrollTo(0, 0);
     },[item])
     useEffect(()=>{
         
-        
+        // for the related kit items
         setKitItems(itemInfo.filter((obj) => (currentItem[0]?.level === obj.level && currentItem[0]?.name !== obj.name)))
+        // for the category items 
         setRelatedItems(itemInfo.filter((obj) => (currentItem[0]?.type === obj.type && currentItem[0]?.name !== obj.name)))  
     },[currentItem])
     

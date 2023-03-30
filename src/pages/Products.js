@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 
 const Products = (props) => {
     const renderSwitch = (param) => {
+        // changes the heading depending on filter result
         switch(param){
             case 'all':
                 setFilterName('All Products');
@@ -45,10 +46,11 @@ const Products = (props) => {
 
 
     }
-    
+    // setting JSON file to be productArray
     const [productArray, setProductArray] = useState(itemInfo);
-    const [filterDisplay, setFilterDisplay] =useState('');
+    // setting name of heading
     const [filterName, setFilterName] = useState('')
+    //display filter modal
     const [open, setOpen] = useState(false);
     const handleButton = (e) => {
         setOpen(!open);
@@ -59,8 +61,10 @@ const Products = (props) => {
     const location = useLocation();
 
     useEffect(()=>{
-        AOS.init({duration:2000}); 
+        AOS.init({duration:2000});
+        // scroll to top  
         window.scrollTo(0, 0)
+        // for links on home page (kit section )
          location.state && setProductArray(itemInfo.filter((item)=>(item.level === location.state.level)));
          location.state && renderSwitch(location.state.level);
         
