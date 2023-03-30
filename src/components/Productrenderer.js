@@ -11,6 +11,7 @@ const Productrenderer = (props) => {
 
 const [showModal, setShowModal] = useState(false);
 const {productID, setProductID} = useAppState()
+const [quantity, setQuantity] = useState('1');
 
 function hideModal() {
     setShowModal(false);
@@ -27,8 +28,15 @@ function hideModal() {
       const savedProducts = savedProductsJSON ? JSON.parse(savedProductsJSON) : []
       // Find the ID and add it to the savedProducts array
       const productToAdd = itemInfo.find(product => product.id === findProductID)
-      savedProducts.push(productToAdd)
-      // console.log('productID: ' + findProductID)
+      if(savedProducts.some(prod => prod.id === productToAdd.id)){
+        const index = savedProducts.findIndex(obj => obj.id === productToAdd.id)
+        savedProducts[index].quantity = +savedProducts[index].quantity + 1;
+        console.log(savedProducts[index].quantity)
+        setQuantity(savedProducts[index].quantity)
+      } else {
+        savedProducts.push(productToAdd);
+      } 
+      
       localStorage.setItem('savedProducts', JSON.stringify(savedProducts))
       // console.log('Storage Array: ' + JSON.stringify(savedProducts))
       setShowModal(true)
@@ -52,6 +60,7 @@ function hideModal() {
                 <div className="modal-content">
                     <h5 className="modal-title"> {props.name} </h5>
                     <p> ...has been added to the basket!</p>
+                    <p style={{paddingTop: "5px"}}>Quantity in basket: {quantity}</p>
                 <button className="modal-navigation" onClick={hideModal}>Stay on page</button>
                 <Link className="modal-navigation" to="/products" end>Go to products page</Link>
                 <Link className="modal-navigation" to="/basket" end>Go to basket</Link>

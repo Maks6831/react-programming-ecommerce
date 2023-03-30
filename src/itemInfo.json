@@ -4,6 +4,7 @@
     "image": "https://i.ebayimg.com/images/g/v2wAAOSwwYtj~v5I/s-l500.jpg",
     "description": "A comfortable and ergonomic chair with adjustable features such as seat height, armrests, and backrest angle, designed for people who spend extended periods of time at a desk.",
     "price": "79.99",
+    "quantity": "1",
     "type": "chair",
     "level": "Ninja"
 },
@@ -13,16 +14,18 @@
     "image": "https://i.ebayimg.com/images/g/HScAAOSwMIFjwEG0/s-l500.jpg",
     "description": "A basic desk chair with a simple design and limited features, suitable for those on a tight budget.",
     "price": "39.99",
+    "quantity": "1",
     "type": "chair",
     "level": "Newbie"
 
 },
 {
     "id": "3",
-    "name": "Merge Master Ergonomic Massage Deskchair",
+    "name": "Master Ergonomic Massage Deskchair",
     "image": "https://i.ebayimg.com/images/g/6AAAAOSwFCBjRqeR/s-l500.jpg",
     "description": "A luxury chair with premium materials, advanced features like lumbar support, adjustable headrest, and various tilt and recline options. Ideal for professionals who prioritize comfort and style, and can afford a higher price point.",
     "price": "249.99",
+    "quantity": "1",
     "type": "chair",
     "level": "Master"
 
@@ -32,6 +35,7 @@
     "image": "https://i.ebayimg.com/images/g/1GAAAOSwByVe2LKz/s-l500.jpg",
     "description": "A basic keyboard with standard keys and a simple design, suitable for those on a tight budget.",
     "price": "12.99",
+    "quantity": "1",
     "type": "keyboard",
     "level": "Newbie"
 },{
@@ -40,6 +44,7 @@
     "image": "https://i.ebayimg.com/images/g/lbcAAOSwZPNcmfpg/s-l300.jpg",
     "description": "A wireless keyboard with standard keys and a simple design, suitable for those who hate those pesky wires!",
     "price": "41.99",
+    "quantity": "1",
     "type": "keyboard",
     "level": "Ninja"
 },{
@@ -48,6 +53,7 @@
     "image": "https://i.ebayimg.com/images/g/hEkAAOSwwYVin0cT/s-l500.jpg",
     "description": "A premium keyboard with advanced features such as mechanical switches, customizable RGB lighting, and ergonomic design. Ideal for serious gamers or professionals who require the highest level of precision and comfort while typing.",
     "price": "249.99",
+    "quantity": "1",
     "type": "keyboard",
     "level": "Master"
 },{
@@ -56,6 +62,7 @@
     "image": "https://i.ebayimg.com/images/g/QXwAAOSwT4JfWzjR/s-l500.jpg",
     "description": "A small-sized monitor with a compact design, suitable for basic computing needs and limited desk space.",
     "price": "29.99",
+    "quantity": "1",
     "type": "monitor",
     "level": "Newbie"
 },{
@@ -64,6 +71,7 @@
     "image": "https://i.ebayimg.com/images/g/xbIAAOSw0~pgS2sP/s-l500.jpg",
     "description": "A larger-sized monitor with a widescreen display, ideal for multitasking, gaming, and entertainment purposes.",
     "price": "121.99",
+    "quantity": "1",
     "type": "monitor",
     "level": "Ninja"
 },{
@@ -72,6 +80,7 @@
     "image": "https://i.ebayimg.com/images/g/QT0AAOSwWMtjPslf/s-l500.jpg",
     "description": "An ultra-large sized monitor with a high-resolution display, capable of delivering sharp and vivid visuals with lifelike colors, suitable for immersive gaming, cinematic viewing, and professional applications.",
     "price": "121.99",
+    "quantity": "1",
     "type": "monitor",
     "level": "Master"
 },{
@@ -80,6 +89,7 @@
     "image": "https://i.ebayimg.com/images/g/9HoAAOSwtWBkFCx-/s-l500.jpg",
     "description": "A simple and affordable mouse that connects to a computer via USB port, with a basic design and features such as left and right buttons and a scroll wheel, suitable for everyday computing tasks.",
     "price": "11.99",
+    "quantity": "1",
     "type": "mouse",
     "level": "Newbie"
 },{
@@ -88,6 +98,7 @@
     "image": "https://i.ebayimg.com/images/g/QksAAOSwGcVj6lFV/s-l500.jpg",
     "description": "A mouse designed for gamers, with additional features such as programmable buttons, adjustable DPI, and customizable RGB lighting, providing enhanced precision and control for gaming and other high-performance tasks.",
     "price": "49.99",
+    "quantity": "1",
     "type": "mouse",
     "level": "Ninja"
 },{
@@ -96,6 +107,7 @@
     "image": "https://i.ebayimg.com/images/g/VL0AAOSwlz1iY8sG/s-l500.jpg",
     "description": "A premium mouse with advanced features such as high-resolution sensors, multiple programmable buttons, customizable weight, and advanced RGB lighting options, designed for gamers and professionals who demand the best in terms of performance, customization, and aesthetics.",
     "price": "79.99",
+    "quantity": "1",
     "type": "mouse",
     "level": "Master"
 }]
