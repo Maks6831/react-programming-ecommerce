@@ -9,3 +9,8 @@
   font-size: 1.3rem;
   width: 100%;
 }
+
+#main-footer small {
+  text-align: center;
+  padding: 0.1rem;
+}
