@@ -97,3 +97,10 @@
     text-align: center;
   }
 }
+@media only screen and (max-width: 576px) {
+  .hero-paragraph {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+}
