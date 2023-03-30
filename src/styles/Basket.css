@@ -71,7 +71,7 @@ a {
 
 .basket-img {
   padding-right: 0.5rem;
-  max-width: 4rem;
+  max-width: 5rem;
   max-height: auto;
 }
 
@@ -233,7 +233,7 @@ tbody {
 
 @media (max-width: 576px) {
   .name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #basket-h1 {
@@ -243,6 +243,12 @@ tbody {
   .clearCart-btn {
     padding: 0.5rem 0.3rem;
     background-color: #f5f5f59b;
+    font-size: 1.2rem;
+  }
+  #total-amount {
+    margin-top: 0px;
+  }
+  .blue-link {
     font-size: 1.2rem;
   }
 }
@@ -266,4 +272,6 @@ tbody {
   .basket-img {
     max-width: 3rem;
   }
+
+ 
 }
