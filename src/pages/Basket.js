@@ -27,10 +27,11 @@ export default function Basket() {
     if (localData.length > 0) {
       let localProducts = [];
       for (let i = 0; i < localData.length; i++) {
+        localData[i].total = localData[i].price * localData[i].quantity
         localProducts.push({
           id: localData[i].id,
           name: localData[i].name,
-          price: localData[i].price,
+          price: localData[i].total,
           image: localData[i].image,
         });
         window.scrollTo(0, 0);
@@ -94,7 +95,7 @@ export default function Basket() {
                 alt={product.name}
                 name={product.name}
                 price={product.price}
-                quantity="1"
+                quantity={product.quantity}
                 removeLocalItem={() => removeLocalItem(product.id)}
               />
             ))}

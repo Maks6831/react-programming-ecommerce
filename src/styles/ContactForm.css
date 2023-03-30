@@ -138,10 +138,32 @@
 }
 
 /*-----------Media queries-----------*/
+@media  (max-width: 900px){
+  .form-feedback-card{
+    text-align: justify;
+    width: 100%;
+  }
+  .form-container {
+    width: 90%;
+  }
+
+  #form-feedback {
+    font-size: 1.2rem;
+  }
+ 
+}
 
 @media (max-width: 768px) {
   .form-container {
     width: 80%;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container span {
+    font-size: 1.8rem;
   }
 
   #submit-btn {
@@ -150,14 +172,22 @@
   }
 }
 
+
 @media (max-width: 480px) {
-  .form-container {
-    width: 90%;
+  .form-feedback-card {
+    padding-left: 0px;
+    padding-right: 0px;
+  
   }
 
-  .form-container h2 {
-    font-size: 1.5rem;
-  }
+ 
+  
+
+ 
+
+
+
+  
 
   .form,
   .form-input-group label,
@@ -171,3 +201,7 @@
     font-size: 1.1rem;
   }
 }
+
+
+  
+

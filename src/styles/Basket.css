@@ -24,11 +24,12 @@ a {
   height: 100%;
   width: 60%;
   margin: auto;
+  margin-bottom: 2rem;
 }
 
 .basket {
   padding: 3rem;
-  height: 100%;
+  min-height: 90vh;
   width: 100%;
   margin: auto;
 }
@@ -70,7 +71,7 @@ a {
 
 .basket-img {
   padding-right: 0.5rem;
-  max-width: 4rem;
+  max-width: 5rem;
   max-height: auto;
 }
 
@@ -100,6 +101,7 @@ tbody {
 
 /*---------- Checkout Section ----------*/
 #total-amount {
+  margin-top: 5rem;
   padding: 1rem;
   font-size: 2rem;
   letter-spacing: 0.3rem;
@@ -136,7 +138,6 @@ tbody {
 }
 
 .blue-link:hover {
-  font-size: 1.7rem;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -223,9 +224,15 @@ tbody {
   }
 }
 
+@media (max-width: 730px) {
+  .basket {
+    margin-top: 3.5rem;
+  }
+}
+
 @media (max-width: 576px) {
   .name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   #basket-h1 {
@@ -235,6 +242,12 @@ tbody {
   .clearCart-btn {
     padding: 0.5rem 0.3rem;
     background-color: #f5f5f59b;
+    font-size: 1.2rem;
+  }
+  #total-amount {
+    margin-top: 0px;
+  }
+  .blue-link {
     font-size: 1.2rem;
   }
 }
