@@ -28,10 +28,12 @@ function hideModal() {
       const savedProducts = savedProductsJSON ? JSON.parse(savedProductsJSON) : []
       // Find the ID and add it to the savedProducts array
       const productToAdd = itemInfo.find(product => product.id === findProductID)
+      // checks to see if product is in local storage if not push to local storage
       if(savedProducts.some(prod => prod.id === productToAdd.id)){
         const index = savedProducts.findIndex(obj => obj.id === productToAdd.id)
         savedProducts[index].quantity = +savedProducts[index].quantity + 1;
         console.log(savedProducts[index].quantity)
+        // set quantity in modal 
         setQuantity(savedProducts[index].quantity)
       } else {
         savedProducts.push(productToAdd);
