@@ -73,7 +73,7 @@ When the user visits the website they are greated by the following homepage.
 
 ## 🚀 INSTALLATION
 
-[The ByteBazaar website is accessible online via this link](https//bytebazaar.netlify.app)
+[The ByteBazaar website is accessible online via this link](https://bytebazaar.netlify.app)
 
 If you want to access the project locally, do the following:
 
